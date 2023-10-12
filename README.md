@@ -14,12 +14,12 @@ You need to have access to a pak bypass, the one I usually use is the one from t
 The project is build around this pak bypass, so I will not guarantee that other pakbypasses will work at all.
 
 ## Steps for building
-#### 1. Add your pakbypass to the `/Resources` folder. The filename must be specifically `PakBypass.exe`.
-#### 2. Open the solution in VS22
-#### 3. Right click the project in the solution explorer (https://i.imgur.com/7Fmne59.png)
-#### 4. Press the `Publish` button and a new page should open.
-#### 5. The project comes with a publish profile, so this should be done automatically, but the settings need to be like this if not: (https://i.imgur.com/Grrf1JP.png)
-#### 6. The project will build into a single file which can be found in: `\bin\Release\net6.0-windows\publish`
+**1.** Add your pakbypass to the `/Resources` folder. The filename must be specifically `PakBypass.exe`. <br>
+**2.** Open the solution in VS22 <br>
+**3.** Right click the project in the solution explorer (https://i.imgur.com/7Fmne59.png) <br>
+**4.** Press the `Publish` button and a new page should open. <br>
+**5.** The project comes with a publish profile, so this should be done automatically, but the settings need to be like this if not: (https://i.imgur.com/Grrf1JP.png) <br>
+**6.** The project will build into a single file which can be found in: `\bin\Release\net6.0-windows\publish` <br>
 
 
 ## How to update Market Files
