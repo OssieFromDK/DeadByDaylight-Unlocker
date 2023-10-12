@@ -1,5 +1,6 @@
 # DeadByDaylight Unlocker
-A Dead By Daylight unlocker for Skins, Characters, Perks &amp; Items - Works for (Steam) / Epic Games Store / Microsoft Store
+A Dead By Daylight unlocker for Skins, Characters, Perks &amp; Items - Works for (Steam) / Epic Games Store / Microsoft Store.
+The project is made in C# WPF
 
 ![all](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/assets/50819244/e1bf88ae-9634-4b3d-a788-c52c92628206)
 
@@ -20,6 +21,7 @@ The project is build around this pak bypass, so I will not guarantee that other 
 **4.** Press the `Publish` button and a new page should open. <br>
 **5.** The project comes with a publish profile, so this should be done automatically, but the settings need to be like this if not: (https://i.imgur.com/Grrf1JP.png) <br>
 **6.** The project will build into a single file which can be found in: `\bin\Release\net6.0-windows\publish` <br>
+**7.** If you want to use the cookie grabber for steam, you will need to copy the files from `\Assemblies` into the final destination folder
 
 
 ## How to update Market Files
