@@ -3,6 +3,9 @@ A Dead By Daylight unlocker for Skins, Characters, Perks &amp; Items - Works for
 
 ![all](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/assets/50819244/e1bf88ae-9634-4b3d-a788-c52c92628206)
 
+## Showcase
+I made a video showcase a while back, you can watch it here: https://www.youtube.com/watch?v=Ke_M9H105ZU
+
 ## How to get started
 Either, if you are a Microsoft Store or Epic Games Store user, and you don't want to use mods for Epic Games, simply go to the releases section and download the build from there, then you don't have to through these steps.
 
