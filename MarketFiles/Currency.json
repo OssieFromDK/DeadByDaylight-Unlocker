@@ -1,0 +1,36 @@
+{
+  "list": [
+    {
+      "balance": 999999999,
+      "currency": "Shards"
+    },
+    {
+      "balance": 999999999,
+      "currency": "Cells"
+    },
+    {
+      "balance": 0,
+      "currency": "USCents"
+    },
+    {
+      "balance": 0,
+      "currency": "BonusBloodpoints"
+    },
+    {
+      "balance": 999999999,
+      "currency": "HalloweenCoins"
+    },
+    {
+      "balance": 999999999,
+      "currency": "LunarNewYearCoins"
+    },
+    {
+      "balance": 999999999,
+      "currency": "HalloweenEventCurrency"
+    },
+    {
+      "balance": 999999999,
+      "currency": "Bloodpoints"
+    }
+  ]
+}
