@@ -50,7 +50,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autoupdater.NET.Official" Version="1.8.4" />
     <PackageReference Include="FiddlerCore5" Version="5.0.2" />
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
     <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
