@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>x64</Platforms>
+    <ApplicationIcon>henry.ico</ApplicationIcon>
+    <_SuppressWpfTrimError>true</_SuppressWpfTrimError>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Title>Fortnite Burger</Title>
+    <Authors>Burger Dev, Burger, Burger, Burger, Burger, Burger, Burger, burgeR, BurgeR</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="henry.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images/Background.png" />
+    <Resource Include="Images/bp.png" />
+    <Resource Include="Images/close.png" />
+    <Resource Include="Images/close_small.png" />
+    <Resource Include="Images/cookie.png" />
+    <Resource Include="Images/discord.png" />
+    <Resource Include="Images/home.png" />
+    <Resource Include="Images/minimize.png" />
+    <Resource Include="Images/Sidebar.png" />
+    <Resource Include="Images/tome.png" />
+    <Resource Include="Images/Topbar.png" />
+    <Resource Include="Images/web.png" />
+    <Resource Include="Images/sweater.png" />
+    <Resource Include="Images/settings.png" />
+    <Resource Include="Images/mods.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autoupdater.NET.Official" Version="1.8.4" />
+    <PackageReference Include="FiddlerCore5" Version="5.0.2" />
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Steamworks.NET">
+      <HintPath>Assemblies\Steamworks.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /y /e &quot;$(ProjectDir)Assemblies&quot; &quot;$(TargetDir)&quot;" />
+  </Target>
+</Project>
