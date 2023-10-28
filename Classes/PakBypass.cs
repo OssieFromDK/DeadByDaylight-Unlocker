@@ -45,8 +45,8 @@ namespace FortniteBurger.Classes
             await CheckForSSL();
 
             string AppDir = Environment.CurrentDirectory;
-            if (!Directory.Exists(AppDir + "/Paks")) Directory.CreateDirectory(AppDir + "/Paks");
-            string Paksdir = Path.Combine(AppDir, "Paks/pakchunk4174-WindowsNoEditor.pak");
+            if (!Directory.Exists(AppDir + "/Mods")) Directory.CreateDirectory(AppDir + "/Mods");
+            string Paksdir = Path.Combine(AppDir, "Mods/pakchunk4174-WindowsNoEditor.pak");
             if (!File.Exists(Paksdir))
             {
                 File.WriteAllBytes(Paksdir, Properties.Resources.SSLBypass);
@@ -63,7 +63,7 @@ namespace FortniteBurger.Classes
 
             File.Delete(path);
             File.Delete(Paksdir);
-            Directory.Delete(AppDir + "/Paks");
+            Directory.Delete(AppDir + "/Mods");
 
             PakBypassedThisSession = true;
         }
@@ -78,21 +78,18 @@ namespace FortniteBurger.Classes
             {
                 int Index = DBDInstallPath.IndexOf("\\Binaries");
                 string DBDContentPath = DBDInstallPath.Substring(0, Index) + "\\Content\\Paks";
-                string FinalPath = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.pak");
-                string ToDelete = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.bak");
-                string ToDeleteSig = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.sig");
-                string ToDeleteKek = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.kek");
+                string ToFind = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.bak");
+                string ToFindSig = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.sig");
+                string ToFindKek = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.kek");
 
-                if (File.Exists(ToDelete)) 
-                    File.Delete(ToDelete);
+                if (!File.Exists(ToFind))
+                    File.WriteAllBytes(ToFind, Properties.Resources.SSLBypass);
 
-                if (File.Exists(ToDeleteSig))
-                    File.Delete(ToDeleteSig);
+                if (!File.Exists(ToFindSig))
+                    File.WriteAllBytes(ToFindSig, Properties.Resources.Signature);
 
-                if (File.Exists(ToDeleteKek))
-                    File.Delete(ToDeleteKek);
-
-                File.WriteAllBytes(FinalPath, Properties.Resources.SSLBypass);
+                if (!File.Exists(ToFindKek))
+                    File.WriteAllBytes(ToFindKek, Properties.Resources.Signature_KEK);
             }
         }
     }

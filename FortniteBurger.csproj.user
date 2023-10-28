@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Oskar\source\repos\FortniteBurger\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="BP.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BPTools.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cookie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Mods.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Overlay.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Profile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Settings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Tome.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="BP.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BPTools.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cookie.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Mods.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Overlay.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Profile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Settings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tome.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

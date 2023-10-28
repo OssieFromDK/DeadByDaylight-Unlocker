@@ -78,7 +78,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y /e &quot;$(ProjectDir)Assemblies&quot; &quot;$(TargetDir)&quot;" />
+  <Target Name="AfterPublish" AfterTargets="MSDeployPublish">
+    <Exec Command="xcopy /y /e &quot;$(ProjectDir)Assemblies&quot; &quot;$(ProjectDir)$(PublishDir)&quot;" />
   </Target>
 </Project>

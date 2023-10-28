@@ -12,7 +12,6 @@ namespace FortniteBurger
         internal static Tome tome = new Tome();
         internal static BP bp = new BP();
         internal static BPTools BPTools = new BPTools();
-        internal static Login login = new Login();
         internal static Profile profile = new Profile();
         internal static MainWindow main;
         internal static Settings settingspage = new Settings();
@@ -25,7 +24,9 @@ namespace FortniteBurger
 
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
-        internal static string CurrVersion = "3.6.0";
+        internal static string DBDVersion = "7.3.2";
+
+        internal static string CurrVersion = "3.6.1";
 
         internal static string CurrentType = "Steam";
 
@@ -35,11 +36,8 @@ namespace FortniteBurger
             main = this;
             Classes.Settings.LoadSettings();
             this.VersionText.Text = "Burger: v" + CurrVersion;
-            login.StartLogin();
-        }
+            this.DbdVersionText.Text = "DBD: v" + DBDVersion;
 
-        internal void LoginDone()
-        {
             Classes.Settings.LoadConfig();
             Classes.Settings.LoadMods();
         }

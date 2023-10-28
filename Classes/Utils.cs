@@ -146,23 +146,9 @@ namespace FortniteBurger.Classes
 
         internal static bool IsGameCurrentlyRunning(string TYPE)
         {
-            Process[] processesByName;
-
-            switch (TYPE)
-            {
-                case "EGS":
-                    processesByName = Process.GetProcessesByName("DeadByDaylight-EGS-Shipping");
-                    if (processesByName.Length > 0) return true;
-                    break;
-                case "Steam":
-                    processesByName = Process.GetProcessesByName("DeadByDaylight-Win64-Shipping");
-                    if (processesByName.Length > 0) return true;
-                    break;
-                case "MS":
-                    processesByName = Process.GetProcessesByName("DeadByDaylight-WinGDK-Shipping");
-                    if (processesByName.Length > 0) return true;
-                    break;
-            }
+            Process[] processesByName = Process.GetProcessesByName(ProccessNames[TYPE]);
+            
+            if (processesByName.Length > 0) return true;
 
             return false;
         }
@@ -171,52 +157,18 @@ namespace FortniteBurger.Classes
         {
             int I = 0;
             bool Found = false;
-            Process[] processesByName;
+            Process[] processesByName = Process.GetProcessesByName(ProccessNames[TYPE]);
 
-            switch(TYPE)
+            while (I <= 60)
             {
-                case "EGS":
-                    while (I <= 60)
-                    {
-                        await Task.Delay(1000);
-                        I++;
-                        processesByName = Process.GetProcessesByName("DeadByDaylight-EGS-Shipping");
-                        if (processesByName.Length > 0)
-                        {
-                            MainWindow.main.ReturnFromLaunch("Successfully Started", true, TYPE);
-                            Found = true;
-                            break;
-                        }
-                    }
+                await Task.Delay(1000);
+                I++;
+                if (processesByName.Length > 0)
+                {
+                    MainWindow.main.ReturnFromLaunch("Successfully Started", true, TYPE);
+                    Found = true;
                     break;
-                case "Steam":
-                    while (I <= 60)
-                    {
-                        await Task.Delay(1000);
-                        I++;
-                        processesByName = Process.GetProcessesByName("DeadByDaylight-Win64-Shipping");
-                        if (processesByName.Length > 0)
-                        {
-                            MainWindow.main.ReturnFromLaunch("Successfully Started", true, TYPE);
-                            Found = true;
-                            break;
-                        }
-                    }
-                    break;
-                case "MS":
-                    while (I <= 60)
-                    {
-                        await Task.Delay(1000);
-                        I++;
-                        processesByName = Process.GetProcessesByName("DeadByDaylight-WinGDK-Shipping");
-                        if (processesByName.Length > 0)
-                        {
-                            MainWindow.main.ReturnFromLaunch("Successfully Started", true, TYPE);
-                            Found = true;
-                            break;
-                        }
-                    }
-                    break;
+                }
             }
 
             if (!Found)
