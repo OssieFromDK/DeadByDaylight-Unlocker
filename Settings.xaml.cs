@@ -91,7 +91,6 @@ namespace FortniteBurger
             }
             else
             {
-
                 if (Classes.Utils.IsGameCurrentlyRunning(MainWindow.CurrentType))
                 {
                     MainWindow.currentOverlay = new Overlay();

@@ -99,7 +99,7 @@ namespace FortniteBurger.Classes
                 (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/Bloodweb.json";
             }
 
-            if ((oSession).uriContains("v1/inventories") && !MainWindow.profile.Off)
+            if ((oSession).uriContains("/api/v1/inventories") && !MainWindow.profile.Off)
             {
                 if(MainWindow.profile.FullProfile)
                 {

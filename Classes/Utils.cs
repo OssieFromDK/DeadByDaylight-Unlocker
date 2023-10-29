@@ -157,10 +157,12 @@ namespace FortniteBurger.Classes
         {
             int I = 0;
             bool Found = false;
-            Process[] processesByName = Process.GetProcessesByName(ProccessNames[TYPE]);
+            Process[] processesByName;
 
             while (I <= 60)
             {
+                processesByName = Process.GetProcessesByName(ProccessNames[TYPE]);
+
                 await Task.Delay(1000);
                 I++;
                 if (processesByName.Length > 0)
