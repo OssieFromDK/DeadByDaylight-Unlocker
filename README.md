@@ -15,7 +15,7 @@
    <img src="https://user-images.githubusercontent.com/50819244/274572040-e1bf88ae-9634-4b3d-a788-c52c92628206.jpg">
 
    `Fortnite Burger` is an Dead by Daylight unlocker, that can unlock characters/DLC, skins, items & perks.
-
+</div>
 
 - Unlock all characters for both killer and survivor
 - Unlock all skins for all characters (they are also visible to others)
@@ -62,5 +62,3 @@ MarketNoSavefile.json -> SkinsONLY.json <br>
 
 # Credits
    This is made solely by <a href="https://github.com/OssieFromDK">me</a>, if you enjoy the tool or like the project, starring the project would be nice :)
-
-</div>
