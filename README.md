@@ -9,6 +9,9 @@
 
    # **Ossie's Dead By Daylight Unlocker (Fortnite Burger)**
 
+   ## Where are the skins?
+   Due to the market updater not being updated for the latest update, I cannot update the market files, so you will not be able to get skins ingame, you can still get every character, items & perks, just not skins for now. I will update the market files once the market updater is fixed.
+   
    ## Maintaining
    This project is only maintained by me, and I will update it whenever I have the time, for market files, you can refer to section below to update manually or submit a pull request for updated market files if they are not up to date.
 
