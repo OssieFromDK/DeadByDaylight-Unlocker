@@ -34,9 +34,13 @@ namespace FortniteBurger.Classes
                 string DBDInstallPath = File.ReadAllText(DBDPath);
                 int Index = DBDInstallPath.IndexOf("\\Binaries");
                 string DBDContentPath = DBDInstallPath.Substring(0, Index) + "\\Content\\Paks";
-                string FinalPath = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.pak");
+                string ToFind = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.bak");
+                string ToFindSig = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.sig");
+                string ToFindKek = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.kek");
 
-                if (File.Exists(FinalPath)) File.Delete(FinalPath);
+                if (File.Exists(ToFind)) File.Delete(ToFind);
+                if (File.Exists(ToFindSig)) File.Delete(ToFindSig);
+                if (File.Exists(ToFindKek)) File.Delete(ToFindKek);
             }
         }
 
