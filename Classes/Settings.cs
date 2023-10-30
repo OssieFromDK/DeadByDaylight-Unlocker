@@ -27,7 +27,7 @@ namespace FortniteBurger.Classes
             WC.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("AppleWebKit", "537.36"));
             WC.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("Safari", "537.36"));
 
-            DownloadSettings();
+            //DownloadSettings();
         }
 
         internal async Task DownloadSettings()
