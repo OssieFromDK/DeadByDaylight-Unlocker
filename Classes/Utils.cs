@@ -179,6 +179,15 @@ namespace FortniteBurger.Classes
             }
         }
 
+        internal static bool IsPakBypassRunning()
+        {
+            Process[] processesByName = Process.GetProcessesByName("PakBypass");
+
+            if (processesByName.Length > 0) return true;
+
+            return false;
+        }
+
         internal static void UpdatedBloodweb(string returnVal)
         {
             string path = Settings.ProfilePath + "/Bloodweb.json";
@@ -213,7 +222,7 @@ namespace FortniteBurger.Classes
             }
 
 
-            System.IO.File.WriteAllText(path, BloodWebObject.ToString());
+            File.WriteAllText(path, BloodWebObject.ToString());
         }
 
         internal static async Task<string[]> FindKillerSteam(string url, string PCID, string bhvrSession)

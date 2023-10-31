@@ -10,7 +10,7 @@ namespace FortniteBurger
     public partial class MainWindow : Window
     {
         internal static Classes.AutoUpdate AutoUpdater = new Classes.AutoUpdate();
-
+        internal static UpdateScreen UpdateScreen = new UpdateScreen();
         internal static Cookie cookie = new Cookie();
         internal static Tome tome = new Tome();
         internal static BP bp = new BP();
@@ -29,7 +29,7 @@ namespace FortniteBurger
 
         internal static string DBDVersion = "7.3.2";
 
-        internal static string CurrVersion = "3.6.2";
+        internal static string CurrVersion = "3.6.3";
 
         internal static string CurrentType = "Steam";
 
@@ -37,10 +37,12 @@ namespace FortniteBurger
         {
             InitializeComponent();
             main = this;
-
-            AutoUpdater.CheckForUpdates();
-
             Classes.Settings.LoadSettings();
+            UpdateScreen.CheckForUpdate();
+        }
+
+        internal void UpdateCheckDone()
+        {
             this.VersionText.Text = "Burger: v" + CurrVersion;
             this.DbdVersionText.Text = "DBD: v" + DBDVersion;
 
@@ -117,6 +119,12 @@ namespace FortniteBurger
 
         private async void Launch_Pressed(object sender, RoutedEventArgs e)
         {
+            if (Classes.Utils.IsPakBypassRunning())
+            {
+                UpdateText.Text = "Finish Pak Bypass before launching";
+                return;
+            }
+
             if(profile.FullProfile)
             {
                 Classes.Utils.UpdateProfiles(int.Parse(profile.PrestigeLevelBox.Text), int.Parse(profile.ItemAmountBox.Text));

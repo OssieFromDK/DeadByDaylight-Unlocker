@@ -76,24 +76,27 @@ namespace FortniteBurger.Classes
         {
             string AppDir = Environment.CurrentDirectory;
             string DBDPath = Path.Combine(AppDir, "dbdPath.txt");;
-            string DBDInstallPath = File.ReadAllText(DBDPath);
-
-            if (DBDInstallPath.Contains("Win64"))
+            if (File.Exists(DBDPath))
             {
-                int Index = DBDInstallPath.IndexOf("\\Binaries");
-                string DBDContentPath = DBDInstallPath.Substring(0, Index) + "\\Content\\Paks";
-                string ToFind = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.bak");
-                string ToFindSig = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.sig");
-                string ToFindKek = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.kek");
+                string DBDInstallPath = File.ReadAllText(DBDPath);
 
-                if (!File.Exists(ToFind))
-                    File.WriteAllBytes(ToFind, Properties.Resources.SSLBypass);
+                if (DBDInstallPath.Contains("Win64"))
+                {
+                    int Index = DBDInstallPath.IndexOf("\\Binaries");
+                    string DBDContentPath = DBDInstallPath.Substring(0, Index) + "\\Content\\Paks";
+                    string ToFind = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.bak");
+                    string ToFindSig = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.sig");
+                    string ToFindKek = Path.Combine(DBDContentPath, "pakchunk4174-WindowsNoEditor.kek");
 
-                if (!File.Exists(ToFindSig))
-                    File.WriteAllBytes(ToFindSig, Properties.Resources.Signature);
+                    if (!File.Exists(ToFind))
+                        File.WriteAllBytes(ToFind, Properties.Resources.SSLBypass);
 
-                if (!File.Exists(ToFindKek))
-                    File.WriteAllBytes(ToFindKek, Properties.Resources.Signature_KEK);
+                    if (!File.Exists(ToFindSig))
+                        File.WriteAllBytes(ToFindSig, Properties.Resources.Signature);
+
+                    if (!File.Exists(ToFindKek))
+                        File.WriteAllBytes(ToFindKek, Properties.Resources.Signature_KEK);
+                }
             }
         }
     }
