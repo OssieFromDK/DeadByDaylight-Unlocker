@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FortniteBurger.Classes
 {
@@ -27,7 +28,14 @@ namespace FortniteBurger.Classes
             WC.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("AppleWebKit", "537.36"));
             WC.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("Safari", "537.36"));
 
-            DownloadSettings();
+            try
+            {
+                DownloadSettings();
+            }
+            catch 
+            {
+                MessageBox.Show("Failed to download Market Files");
+            }
         }
 
         internal async Task DownloadSettings()
@@ -114,6 +122,7 @@ namespace FortniteBurger.Classes
             if (!File.Exists(specificFolder)) return;
             string JSON = File.ReadAllText(specificFolder);
 
+            if (string.IsNullOrEmpty(JSON)) return;
             List<string> InstalledMods = JsonConvert.DeserializeObject<List<string>>(JSON);
 
             foreach(string Mod in InstalledMods)

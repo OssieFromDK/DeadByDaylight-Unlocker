@@ -1,7 +1,6 @@
-﻿using AutoUpdaterDotNET;
-using System;
+﻿using System;
 using System.Threading.Tasks;
-using System.Timers;
+using System.Windows.Forms;
 using System.Windows;
 using System.Windows.Input;
 
@@ -24,14 +23,15 @@ namespace FortniteBurger
         //internal static Classes.LobbyInfo LobbyInfo = new Classes.LobbyInfo();
         internal static Classes.SysTray SysTray = new Classes.SysTray();
         internal static Overlay currentOverlay;
-
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
         internal static string DBDVersion = "7.3.2";
-
-        internal static string CurrVersion = "3.6.3";
-
+        internal static string CurrVersion = "3.6.4";
         internal static string CurrentType = "Steam";
+
+        internal bool InQueue = false;
+        internal int ETA = 0;
+        internal string Pos = "0";
 
         public MainWindow()
         {
@@ -130,10 +130,12 @@ namespace FortniteBurger
                 Classes.Utils.UpdateProfiles(int.Parse(profile.PrestigeLevelBox.Text), int.Parse(profile.ItemAmountBox.Text));
             }
 
-            if (!Classes.FiddlerCore.FiddlerIsRunning)
+            if (Classes.FiddlerCore.FiddlerIsRunning)
             {
-                Classes.FiddlerCore.StartFiddlerCore();
+                Classes.FiddlerCore.StopFiddlerCore();
             }
+
+            Classes.FiddlerCore.StartFiddlerCore();
 
             Launch.Visibility = Visibility.Hidden;
             Spinner.Visibility = Visibility.Visible;
@@ -149,6 +151,15 @@ namespace FortniteBurger
                     UpdateText.Text = "Awaiting SSL Bypass...";
                     await PakBypass.LoadSSLBypass();
                 }
+
+                if (Classes.Mods.ModManager.HasInstalledNewMods) // Prevent Violation Error Crash
+                {
+                    UpdateText.Text = "Awaiting Pak Bypass...";
+                    await PakBypass.LoadPakBypass();
+
+                    UpdateText.Text = "Awaiting SSL Bypass...";
+                    await PakBypass.LoadSSLBypass();
+                }
             }
 
             UpdateText.Text = "Awaiting Game Launch...";
@@ -156,7 +167,7 @@ namespace FortniteBurger
             Classes.Utils.CheckForGameRunning(CurrentType);
         }
 
-        private Timer Timer;
+        internal Timer Timer = new Timer() { Interval = 250 };
 
         private void StartChecking()
         {
@@ -164,26 +175,23 @@ namespace FortniteBurger
             {
                 if (settingspage.HideToTray) SysTray.StartSysTray();
             }));
-            Timer = new Timer(250);
-            Timer.AutoReset = true;
-            Timer.Elapsed += new ElapsedEventHandler(CheckGameRunning);
-            Timer.Enabled = true;
+            Timer.Tick += CheckGameRunning;
             Timer.Start();
         }
 
-        private void CheckGameRunning(object sender, ElapsedEventArgs e)
+        private void CheckGameRunning(object sender, EventArgs e)
         {
             if (!Classes.Utils.IsGameCurrentlyRunning(CurrentType))
             {
                 this.Dispatcher.Invoke((Action)(() =>
                 {
+                    Timer.Tick -= CheckGameRunning;
+                    Timer.Stop();
+
                     if (settingspage.HideToTray) SysTray.StopSysTray();
                 }));
 
                 Classes.FiddlerCore.StopFiddlerCore();
-
-                Timer.Stop();
-                Timer.Dispose();
             }
         }
 
@@ -227,6 +235,8 @@ namespace FortniteBurger
             }
             else
             {
+                Classes.FiddlerCore.StopFiddlerCore();
+
                 this.Dispatcher.Invoke((Action)(() =>
                 {
                     Spinner.Visibility = Visibility.Hidden;

@@ -8,12 +8,11 @@ namespace FortniteBurger.Classes.Mods
     internal class ModManager
     {
         static IniFile EngineIni;
+        internal static bool HasInstalledNewMods = false;
 
         internal ModManager()
         {
             EngineIni = new IniFile(Utils.GetGameINIDir() + "\\Engine.ini");
-
-
         }
 
         internal static void UpdateEngine()
@@ -200,6 +199,8 @@ namespace FortniteBurger.Classes.Mods
 
                 CoreMod.IsInstalled = true;
             }
+
+            HasInstalledNewMods = true;
         }
 
         internal static void DeleteMod(string ModName)

@@ -17,13 +17,7 @@ namespace FortniteBurger
         public Overlay()
         {
             InitializeComponent();
-
             this.IsHitTestVisible = false;
-
-            //MainWindow.LobbyInfo.QueueUpdated += ProcessQueue;
-            //MainWindow.LobbyInfo.MatchUpdated += ProcessMatchedInfo;
-            //MainWindow.LobbyInfo.MatchInfoUpdated += ProcessMatchInfo;
-            //MainWindow.LobbyInfo.QueueCancelled += FireQueueCancelled;
 
             timer = new Timer(100);
             timer.AutoReset = true;
@@ -70,7 +64,7 @@ namespace FortniteBurger
             return DBDProcess.MainWindowHandle;
         }
 
-        private void UpdateWindow(object sender, ElapsedEventArgs e)
+        internal void UpdateWindow(object sender, ElapsedEventArgs e)
         {
             IntPtr ForeGroundWindow = Classes.User32.GetForegroundWindow();
             if (Window == IntPtr.Zero || ForeGroundWindow != Window)
@@ -86,6 +80,20 @@ namespace FortniteBurger
 
                 this.Dispatcher.Invoke((Action)(() =>
                 {
+                    if (MainWindow.main.InQueue)
+                    {
+                        this.Standard.Visibility = Visibility.Hidden;
+                        this.ETA_Text.Text = new DateTime(MainWindow.main.ETA).ToString("mm:ss");
+                        this.POS_Text.Text = MainWindow.main.Pos;
+                        this.InQ.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        this.InQ.Visibility = Visibility.Hidden;
+                        this.Standard.Visibility = Visibility.Visible;
+                    }
+
+
                     this.Time_Text.Text = DateTime.Now.ToString("HH:mm:ss");
                     this.Width = (rect.Right - rect.Left);
                     this.Height = (rect.Bottom - rect.Top);
@@ -102,15 +110,7 @@ namespace FortniteBurger
             timer.Dispose();
         }
 
-
-        /*private void ProcessQueue(object sender, (string ETA, string POS) E)
-        {
-            ETA_Text.Text = "Waiting Time: " + E.ETA;
-            POS_Text.Text = "Position: " + E.POS;
-            InQueue.Visibility = Visibility.Visible;
-        }
-
-        // Match Found
+        /*// Match Found
         private void ProcessMatchedInfo(object sender, (string Rank, string Country, string Rating, string Server, string Killer) E)
         {
             Rank_Text.Text = "Killer Rank: " + E.Rank;
@@ -129,12 +129,6 @@ namespace FortniteBurger
             SteamId_Text.Text = "Killer Steam ID: " + E.SteamId;
 
             InMatch.Visibility = Visibility.Visible;
-        }
-
-        private void FireQueueCancelled(object sender, EventArgs e)
-        {
-            InQueue.Visibility = Visibility.Hidden;
-            InMatch.Visibility = Visibility.Hidden;
         }*/
 
 

@@ -7,12 +7,25 @@
         mc:Ignorable="d"
         Title="Overlay" IsHitTestVisible="False" IsEnabled="False" ShowInTaskbar="False" Height="1080" Width="1920" AllowsTransparency="True" WindowStyle="None" Background="Transparent" Topmost="True">
     <Grid IsHitTestVisible="False"  x:Name="Info" Visibility="Visible">
-        <Rectangle x:Name="BoundingBox_Stroke" Stroke="#121213" StrokeThickness="1.0" RadiusX="3" RadiusY="3" Visibility="Visible" Width="125" Height="53" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
-        <Rectangle x:Name="BoundingBox_Info" Opacity="0.4" RadiusX="3" RadiusY="3" Visibility="Visible" Fill="#121213" Width="125" Height="53" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
-        <TextBlock x:Name="FB_Text" Margin="0,0,62,48" Opacity="0.6" Text="Fortnite Burger"  Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+        <Grid x:Name="Standard" Visibility="Visible">
+            <Rectangle x:Name="BoundingBox_Stroke" Stroke="#121213" StrokeThickness="1.0" RadiusX="3" RadiusY="3" Visibility="Visible" Width="125" Height="53" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <Rectangle x:Name="BoundingBox_Info" Opacity="0.4" RadiusX="3" RadiusY="3" Visibility="Visible" Fill="#121213" Width="125" Height="53" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <TextBlock x:Name="FB_Text" Margin="0,0,40,48" Opacity="0.6" Text="Fortnite Burger"  Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+        </Grid>
+
+        <Grid x:Name="InQ" Visibility="Hidden">
+            <Rectangle x:Name="BoundingBox_Stroke_Q" Stroke="#121213" StrokeThickness="1.0" RadiusX="3" RadiusY="3" Visibility="Visible" Width="125" Height="107" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <Rectangle x:Name="BoundingBox_Info_Q" Opacity="0.4" RadiusX="3" RadiusY="3" Visibility="Visible" Fill="#121213" Width="125" Height="107" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <TextBlock x:Name="FB_Text_Q" Margin="0,0,40,102" Opacity="0.6" Text="Fortnite Burger"  Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <TextBlock x:Name="InQ_Text" Margin="0,0,55,84" Opacity="0.6" Text="In Queue"  Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <TextBlock x:Name="ETA_Header_Text" Margin="0,0,111,48" Opacity="0.6" Text="ETA:"  Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <TextBlock x:Name="POS_Header_Text" Margin="0,0,111,66" Opacity="0.6" Text="Pos:"  Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <TextBlock x:Name="ETA_Text" Margin="0,0,15,48" Text="05:22" Opacity="0.6" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+            <TextBlock x:Name="POS_Text" Margin="0,0,15,66" Text="555" Opacity="0.6" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
+        </Grid>
+
         <TextBlock x:Name="VER_Header_Text" Margin="0,0,92,30" Opacity="0.6" Text="Version:"  Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
         <TextBlock x:Name="Time_Header_Text" Margin="0,0,103,12" Opacity="0.6" Text="Clock:"  Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
-
         <TextBlock x:Name="VER_Text" Margin="0,0,15,30" Text="v2.5" Opacity="0.6" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
         <TextBlock x:Name="Time_Text" Margin="0,0,15,12" Text="15:49:52" Opacity="0.6" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Right" VerticalAlignment="Bottom" IsHitTestVisible="False"/>
     </Grid>
