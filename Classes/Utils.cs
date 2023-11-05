@@ -6,7 +6,6 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 
@@ -14,11 +13,6 @@ namespace FortniteBurger.Classes
 {
     internal class Utils
     {
-        private static HttpClient httpClient = new HttpClient(new HttpClientHandler()
-        {
-            UseCookies = false
-        });
-
         internal static Dictionary<string, string> ProccessNames = new Dictionary<string, string>()
         {
             ["Steam"] = "DeadByDaylight-Win64-Shipping",
@@ -223,40 +217,6 @@ namespace FortniteBurger.Classes
 
 
             File.WriteAllText(path, BloodWebObject.ToString());
-        }
-
-        internal static async Task<string[]> FindKillerSteam(string url, string PCID, string bhvrSession)
-        {
-            try
-            {
-                Uri uri = new Uri(url);
-                httpClient.BaseAddress = uri;
-                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "api/v1/players/" + PCID + "/provider/provider-id");
-                request.Headers.Add("Accept", "*/*");
-                request.Headers.Add("Accept-Encoding", "deflate, gzip");
-                request.Headers.Add("Cookie", "bhvrSession=" + bhvrSession);
-                request.Headers.Add("x-kraken-client-platform", "steam");
-                request.Headers.Add("x-kraken-client-provider", "steam");
-                request.Headers.Add("x-kraken-client-version", "4.5.0");
-                request.Headers.Add("User-Agent", "DeadByDaylight/++DeadByDaylight+Live-CL-404154 Windows/10.0.19042.1.768.64bit");
-                SteamRootobject steamRootobject = JsonConvert.DeserializeObject<SteamRootobject>(await (await httpClient.SendAsync(request)).Content.ReadAsStringAsync());
-                string[] killerSteam = new string[2];
-                if (!string.IsNullOrEmpty(steamRootobject.providerId))
-                {
-                    killerSteam[0] = steamRootobject.provider.ToString();
-                    killerSteam[1] = steamRootobject.providerId.ToString();
-                }
-                else
-                {
-                    killerSteam[0] = "";
-                    killerSteam[1] = "";
-                }
-                return killerSteam;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
         }
 
         private class SteamRootobject

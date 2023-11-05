@@ -18,12 +18,12 @@ namespace FortniteBurger.Classes
         private static void EnsureRootCertGrabber()
         {
             CertMaker.createRootCert();
-            string str = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Cookie-Grabber");
+            string str = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FortniteBurger");
             if (!Directory.Exists(str))
                 Directory.CreateDirectory(str);
             string path = Path.Combine(str, "root.cer");
             X509Certificate2 rootCertificate = CertMaker.GetRootCertificate();
-            rootCertificate.FriendlyName = "Cookie Grabber";
+            rootCertificate.FriendlyName = "FortniteBurger";
             File.WriteAllBytes(path, rootCertificate.Export(X509ContentType.Cert));
             X509Store x509Store = new X509Store(StoreName.Root, StoreLocation.CurrentUser);
             x509Store.Open(OpenFlags.ReadWrite);
@@ -53,10 +53,11 @@ namespace FortniteBurger.Classes
         public static void StartFiddlerCore()
         {
             EnsureRootCertGrabber();
-            EnsureRootCertificate();
+            //EnsureRootCertificate();
             FiddlerIsRunning = true;
             CONFIG.IgnoreServerCertErrors = true;
-            FiddlerApplication.Startup(new FiddlerCoreStartupSettingsBuilder().ListenOnPort((ushort)8888).DecryptSSL().OptimizeThreadPool().ChainToUpstreamGateway().RegisterAsSystemProxy().Build());
+            CONFIG.EnableIPv6 = true;
+            FiddlerApplication.Startup(new FiddlerCoreStartupSettingsBuilder().ListenOnPort((ushort)8888).DecryptSSL().RegisterAsSystemProxy().Build());
         }
 
         public static void StartWithShutdown()
@@ -66,7 +67,7 @@ namespace FortniteBurger.Classes
 
         public static void StartWithoutShutdown()
         {
-            FiddlerApplication.BeforeRequest -= GrabWithoutShutdown; // Vær sikker på at den ikke er registreret til eventet 2 gange
+            FiddlerApplication.BeforeRequest -= GrabWithoutShutdown;
             FiddlerApplication.BeforeRequest += GrabWithoutShutdown;
         }
 
@@ -80,6 +81,8 @@ namespace FortniteBurger.Classes
 
         public static void StopFiddlerCore()
         {
+            CertMaker.removeFiddlerGeneratedCerts(true);
+
             FiddlerApplication.BeforeRequest -= LaunchedWithProfileEditor;
             FiddlerApplication.BeforeRequest -= GrabWithoutShutdown;
             //FiddlerApplication.BeforeResponse -= LaunchLobbyInfo;
@@ -136,45 +139,43 @@ namespace FortniteBurger.Classes
 
         private static void ProfileEditor(Session oSession)
         {
-            if ((oSession).uriContains("/api/v1/dbd-character-data/get-all") && MainWindow.profile.FullProfile && !MainWindow.profile.Off) 
-                (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/Profile.json";
+            if (oSession.uriContains("/api/v1/dbd-character-data/get-all") && MainWindow.profile.FullProfile && !MainWindow.profile.Off)
+                oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Profile.json";
 
-            if ((oSession).uriContains("/api/v1/dbd-character-data/bloodweb") && MainWindow.profile.FullProfile && !MainWindow.profile.Off)
-            {
-                (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/Bloodweb.json";
-            }
+            if (oSession.uriContains("/api/v1/dbd-character-data/bloodweb") && MainWindow.profile.FullProfile && !MainWindow.profile.Off)
+                oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Bloodweb.json";
 
-            if ((oSession).uriContains("/api/v1/inventories") && !MainWindow.profile.Off)
+            if (oSession.uriContains("/api/v1/inventories") && !MainWindow.profile.Off)
             {
-                if(MainWindow.profile.FullProfile)
+                if (MainWindow.profile.FullProfile)
                 {
-                    (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/SkinsWithItems.json";
+                    oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/SkinsWithItems.json";
                 }
                 else if(MainWindow.profile.Skins_Only)
                 {
-                    (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/SkinsONLY.json";
+                    oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/SkinsONLY.json";
                 }
                 else if(MainWindow.profile.Skins_Perks_Only)
                 {
-                    (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/SkinsPerks.json";
+                    oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/SkinsPerks.json";
                 }
                 else if (MainWindow.profile.DLC_Only)
                 {
-                    (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/DlcOnly.json";
+                    oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/DlcOnly.json";
                 }
             }
 
-            if ((oSession).uriContains("api/v1/wallet/currencies") && MainWindow.profile.Currency_Spoof)
-                (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/Currency.json";
+            if (oSession.uriContains("api/v1/wallet/currencies") && MainWindow.profile.Currency_Spoof)
+                oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Currency.json";
 
-            if (((oSession).uriContains("api/v1/extensions/playerLevels/getPlayerLevel")  || (oSession).uriContains("api/v1/extensions/playerLevels/earnPlayerXp")) && MainWindow.profile.Level_Spoof)
-                (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/Level.json";
+            if ((oSession.uriContains("api/v1/extensions/playerLevels/getPlayerLevel")  || oSession.uriContains("api/v1/extensions/playerLevels/earnPlayerXp")) && MainWindow.profile.Level_Spoof)
+                oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Level.json";
 
-           //if ((oSession).uriContains("/catalog") && (MainWindow.profile.Break_Skins) && !MainWindow.profile.Off) Catalog isn't working rn and causes skins to not work
-           //     (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/Catalog.json";
+           //if (oSession.uriContains("/catalog") && (MainWindow.profile.Break_Skins) && !MainWindow.profile.Off) Catalog isn't working rn and causes skins to not work
+           //     oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Catalog.json";
 
-            if ((oSession).uriContains("itemsKillswitch") && (MainWindow.profile.Disabled) && !MainWindow.profile.Off)
-                (oSession).oFlags["x-replywithfile"] = Settings.ProfilePath + "/Disabled.json";
+            if (oSession.uriContains("itemsKillswitch") && (MainWindow.profile.Disabled) && !MainWindow.profile.Off)
+                oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Disabled.json";
         }
 
         private static void CookieGrabWithoutShutdown(Session oSession)

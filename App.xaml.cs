@@ -31,16 +31,7 @@ namespace FortniteBurger
 
         private void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs unobservedTaskExceptionEventArgs)
         {
-            Classes.FiddlerCore.StopFiddlerCore();
-            Classes.Settings.SaveConfig();
-            Classes.Settings.SaveSettings();
-            Classes.Settings.SaveMods();
 
-
-            if (Overlay.timer != null)
-            {
-                Overlay.StopTimer();
-            }
         }
 
         private void DispatcherOnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs dispatcherUnhandledExceptionEventArgs)

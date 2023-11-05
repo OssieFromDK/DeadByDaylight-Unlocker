@@ -26,7 +26,7 @@ namespace FortniteBurger
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
         internal static string DBDVersion = "7.3.2";
-        internal static string CurrVersion = "3.6.4";
+        internal static string CurrVersion = "3.6.5";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
@@ -151,15 +151,15 @@ namespace FortniteBurger
                     UpdateText.Text = "Awaiting SSL Bypass...";
                     await PakBypass.LoadSSLBypass();
                 }
+            }
 
-                if (Classes.Mods.ModManager.HasInstalledNewMods) // Prevent Violation Error Crash
-                {
-                    UpdateText.Text = "Awaiting Pak Bypass...";
-                    await PakBypass.LoadPakBypass();
+            if (Classes.Mods.ModManager.HasInstalledNewMods) // Prevent Violation Error Crash
+            {
+                UpdateText.Text = "Awaiting Pak Bypass...";
+                await PakBypass.LoadPakBypass();
 
-                    UpdateText.Text = "Awaiting SSL Bypass...";
-                    await PakBypass.LoadSSLBypass();
-                }
+                UpdateText.Text = "Awaiting SSL Bypass...";
+                await PakBypass.LoadSSLBypass();
             }
 
             UpdateText.Text = "Awaiting Game Launch...";
@@ -175,10 +175,12 @@ namespace FortniteBurger
             {
                 if (settingspage.HideToTray) SysTray.StartSysTray();
             }));
+            HasStopped = false;
             Timer.Tick += CheckGameRunning;
             Timer.Start();
         }
 
+        private bool HasStopped = false;
         private void CheckGameRunning(object sender, EventArgs e)
         {
             if (!Classes.Utils.IsGameCurrentlyRunning(CurrentType))
@@ -191,7 +193,11 @@ namespace FortniteBurger
                     if (settingspage.HideToTray) SysTray.StopSysTray();
                 }));
 
-                Classes.FiddlerCore.StopFiddlerCore();
+                if (Classes.FiddlerCore.FiddlerIsRunning && !HasStopped)
+                {
+                    HasStopped = true;
+                    Classes.FiddlerCore.StopFiddlerCore();
+                }
             }
         }
 

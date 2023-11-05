@@ -15,13 +15,14 @@ namespace FortniteBurger.Classes
         internal static string ProfilePath = LocalAppData + "/FortniteBurger/Configs/Profiles";
         private HttpClient WC = new HttpClient();
 
-
         internal Settings()
 		{
             if (!Directory.Exists(LocalAppData + "/FortniteBurger")) Directory.CreateDirectory(LocalAppData + "/FortniteBurger");
             if (!Directory.Exists(LocalAppData + "/FortniteBurger/Settings")) Directory.CreateDirectory(LocalAppData + "/FortniteBurger/Settings");
             if (!Directory.Exists(LocalAppData + "/FortniteBurger/Configs")) Directory.CreateDirectory(LocalAppData + "/FortniteBurger/Configs");
             if (!Directory.Exists(LocalAppData + "/FortniteBurger/Configs/Profiles")) Directory.CreateDirectory(LocalAppData + "/FortniteBurger/Configs/Profiles");
+
+            WC.Timeout = TimeSpan.FromMinutes(5);
 
             WC.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("Chrome", "115.0.0.0"));
             WC.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("Mozilla", "5.0"));
