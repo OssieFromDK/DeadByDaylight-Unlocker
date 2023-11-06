@@ -56,6 +56,18 @@ namespace FortniteBurger.Classes
                 File.WriteAllBytes(Paksdir, Properties.Resources.SSLBypass);
             }
 
+            // Load Custom Mods
+            if (Directory.Exists(AppDir + "/CustomMods"))
+            {
+                string[] Files = Directory.GetFiles(AppDir + "/CustomMods");
+                foreach (string FileLocation in Files)
+                {
+                    string FileName = Path.GetFileName(FileLocation);
+                    string NewFileName = MainWindow.CurrentType == "EGS" ? FileName.Replace("WindowsNoEditor", "EGS") : FileName.Replace("EGS", "WindowsNoEditor");
+                    File.Copy(FileLocation, AppDir + "/Mods/" + NewFileName);
+                }
+            }
+
             string path = Path.Combine(Path.GetTempPath(), "PakBypass.exe");
             File.WriteAllBytes(path, Properties.Resources.PakBypass);
             Process PakBypassProcess = Process.Start(path);
@@ -66,9 +78,7 @@ namespace FortniteBurger.Classes
             }
 
             File.Delete(path);
-            File.Delete(Paksdir);
-            Directory.Delete(AppDir + "/Mods");
-
+            Directory.Delete(AppDir + "/Mods", true);
             PakBypassedThisSession = true;
         }
 

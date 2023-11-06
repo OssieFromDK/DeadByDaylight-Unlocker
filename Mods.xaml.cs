@@ -111,6 +111,25 @@ namespace FortniteBurger
             Values[InstallType + "_AfterInstall"].Visibility = Visibility.Visible;
         }
 
+        private void Browse(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+            openFileDlg.Title = "Fortnite Burger Custom Mods";
+            openFileDlg.DefaultExt = ".pak";
+            openFileDlg.Filter = "Pak Files (.pak)|*.pak";
+            openFileDlg.InitialDirectory = Environment.CurrentDirectory;
+            openFileDlg.Multiselect = true;
+            Nullable<bool> result = openFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+                foreach (string File in openFileDlg.FileNames)
+                {
+                    Classes.Mods.ModManager.AddCustomMod(File);
+                }
+            }
+        }
+
         private void Configure(object sender, RoutedEventArgs e)
         {
             Button Btn = sender as Button;

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:FortniteBurger"
       xmlns:fa="http://schemas.fontawesome.io/icons/"
       mc:Ignorable="d" 
-      d:DesignHeight="615" d:DesignWidth="850"
+      d:DesignHeight="615" d:DesignWidth="850"  
       Title="Mods">
 
     <Page.Resources>
@@ -227,7 +227,16 @@
                         <Button  IsEnabled="False" Tag="OA" Opacity="0.4" Visibility="Visible" Style="{StaticResource ModButtonStyle}" x:Name="OA_ConfigureButton" Content="Configure" FontSize="18" Margin="275,1060,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     </Grid>
 
-                    <Separator Margin="0,1000,0,0" Height="150" VerticalAlignment="Top" Background="Transparent"/>
+                    <!-- Custom Mods -->
+                    <Rectangle x:Name="Custom" Margin="0,1150,0,0" Width="700" Height="100" Fill="#121213" RadiusX="5" RadiusY="5" Stroke="#3A3B3C" StrokeThickness="1.0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="Custom_Header" Visibility="Visible" FontSize="30" Margin="0,1150,440,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Custom Mods" Width="250" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                    <Label x:Name="Custom_Desc_Label" Visibility="Visible" FontSize="15" Margin="0,1200,340,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold">
+                        <TextBlock x:Name="Custom_Desc_Text" TextWrapping="WrapWithOverflow" Text="Add your own mods, these will be loaded together with the other mods on launch"/>
+                    </Label>
+
+                    <Button Visibility="Visible" Click="Browse" Tag="Custom" Style="{StaticResource ModButtonStyle}" x:Name="Custom_InstallButton"  Content="Browse"  FontSize="18" Margin="550,1210,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                    <Separator Margin="0,1150,0,0" Height="150" VerticalAlignment="Top" Background="Transparent"/>
                 </Grid>
             </ScrollViewer>
         </Grid>

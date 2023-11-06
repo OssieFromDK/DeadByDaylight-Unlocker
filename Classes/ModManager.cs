@@ -1,4 +1,5 @@
 ﻿using FortniteBurger.Properties;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -263,6 +264,21 @@ namespace FortniteBurger.Classes.Mods
             {
                 DeleteMod("Core");
             }
+        }
+
+        internal static void AddCustomMod(string FileLocation)
+        {
+            if (!Directory.Exists(Environment.CurrentDirectory + "/CustomMods"))
+                Directory.CreateDirectory(Environment.CurrentDirectory + "/CustomMods");
+
+            string FileName = Path.GetFileName(FileLocation);
+
+            if (File.Exists(Environment.CurrentDirectory + "/CustomMods/" + FileName))
+                return;
+
+            File.Copy(FileLocation, Environment.CurrentDirectory + "/CustomMods/" + FileName);
+
+            HasInstalledNewMods = true;
         }
     }
 }

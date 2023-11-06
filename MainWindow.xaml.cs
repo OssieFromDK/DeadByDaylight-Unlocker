@@ -26,7 +26,7 @@ namespace FortniteBurger
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
         internal static string DBDVersion = "7.3.2";
-        internal static string CurrVersion = "3.6.5";
+        internal static string CurrVersion = "3.6.5.1";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
@@ -191,6 +191,8 @@ namespace FortniteBurger
                     Timer.Stop();
 
                     if (settingspage.HideToTray) SysTray.StopSysTray();
+
+                    this.UpdateText.Text = String.Empty;
                 }));
 
                 if (Classes.FiddlerCore.FiddlerIsRunning && !HasStopped)
