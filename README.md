@@ -62,5 +62,8 @@ MarketDlcOnly.json -> DlcOnly.json <br>
 MarketWithPerks.json -> SkinsPerks.json <br>
 MarketNoSavefile.json -> SkinsONLY.json <br>
 
+# Supporting
+I have made a [ko-fi](https://ko-fi.com/ossiefromdk) if you wish to support me or the project :)
+
 # Credits
    This is made solely by <a href="https://github.com/OssieFromDK">me</a>, if you enjoy the tool or like the project, starring the project would be nice :)
