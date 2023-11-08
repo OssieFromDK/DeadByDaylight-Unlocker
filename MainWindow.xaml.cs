@@ -25,8 +25,8 @@ namespace FortniteBurger
         internal static Overlay currentOverlay;
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
-        internal static string DBDVersion = "7.3.2";
-        internal static string CurrVersion = "3.6.5.1";
+        internal static string DBDVersion = "7.3.3";
+        internal static string CurrVersion = "3.6.5.2";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
@@ -46,6 +46,8 @@ namespace FortniteBurger
             this.VersionText.Text = "Burger: v" + CurrVersion;
             this.DbdVersionText.Text = "DBD: v" + DBDVersion;
 
+            Classes.Telemetry.Load();
+            Classes.Telemetry.Add();
             Classes.Settings.LoadConfig();
             Classes.Settings.LoadMods();
         }
@@ -60,15 +62,7 @@ namespace FortniteBurger
         {
             Close();
 
-            Classes.FiddlerCore.StopFiddlerCore();
-            Classes.Settings.SaveConfig();
-            Classes.Settings.SaveSettings();
-            Classes.Settings.SaveMods();
-             
-            if (Overlay.timer != null)
-            {
-                Overlay.StopTimer();
-            }
+            Classes.CloseManager.Close();
 
             Environment.Exit(0);
         }

@@ -18,15 +18,7 @@ namespace FortniteBurger
 
         private void Application_Exit(object sender, EventArgs e)
         {
-            Classes.FiddlerCore.StopFiddlerCore();
-            Classes.Settings.SaveConfig();
-            Classes.Settings.SaveSettings();
-            Classes.Settings.SaveMods();
-
-            if (Overlay.timer != null)
-            {
-                Overlay.StopTimer();
-            }
+            Classes.CloseManager.Close();
         }
 
         private void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs unobservedTaskExceptionEventArgs)
@@ -36,43 +28,17 @@ namespace FortniteBurger
 
         private void DispatcherOnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs dispatcherUnhandledExceptionEventArgs)
         {
-            Classes.FiddlerCore.StopFiddlerCore();
-            Classes.Settings.SaveConfig();
-            Classes.Settings.SaveSettings();
-            Classes.Settings.SaveMods();
-
-            if(Overlay.timer != null)
-            {
-                Overlay.StopTimer();
-            }
+            Classes.CloseManager.Close();
         }
 
         private static void CurrentDomainOnUnhandledException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)
         {
-            Classes.FiddlerCore.StopFiddlerCore();
-            Classes.Settings.SaveConfig();
-            Classes.Settings.SaveSettings();
-            Classes.Settings.SaveMods();
-
-
-            if (Overlay.timer != null)
-            {
-                Overlay.StopTimer();
-            }
+            Classes.CloseManager.Close();
         }
 
         private void SessionEndingShutdown(object sender, SessionEndingCancelEventArgs unhandledExceptionEventArgs)
         {
-            Classes.FiddlerCore.StopFiddlerCore();
-            Classes.Settings.SaveConfig();
-            Classes.Settings.SaveSettings();
-            Classes.Settings.SaveMods();
-
-
-            if (Overlay.timer != null)
-            {
-                Overlay.StopTimer();
-            }
+            Classes.CloseManager.Close();
         }
     }
 }
