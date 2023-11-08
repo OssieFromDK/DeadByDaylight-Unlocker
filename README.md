@@ -6,7 +6,7 @@
    [![x64](https://img.shields.io/badge/Arch-x64-red.svg?style=plastic)](https://en.wikipedia.org/wiki/X86-64)
    [![License](https://img.shields.io/github/license/OssieFromDK/DeadByDaylight-Unlocker.svg?style=plastic)](LICENSE)
    [![Issues](https://img.shields.io/github/issues/OssieFromDK/DeadByDaylight-Unlocker.svg?style=plastic)](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/issues)
-   [![Total downloads](https://img.shields.io/github/downloads/OssieFromDK/DeadByDaylight-Unlocker/total.svg?label=Downloads&logo=github&cacheSeconds=600)](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/releases/latest)
+   [![Total downloads](https://img.shields.io/github/downloads/OssieFromDK/DeadByDaylight-Unlocker/total.svg?label=Downloads&logo=github&cacheSeconds=600&style=plastic)](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/releases/latest)
 
    # **Ossie's Dead By Daylight Unlocker (Fortnite Burger)**
    
