@@ -4,11 +4,11 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <Platforms>x64</Platforms>
-    <ApplicationIcon>henry.ico</ApplicationIcon>
+    <ApplicationIcon>burger.ico</ApplicationIcon>
     <_SuppressWpfTrimError>true</_SuppressWpfTrimError>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Title>Fortnite Burger</Title>
-    <Authors>Burger Dev, Burger, Burger, Burger, Burger, Burger, Burger, burgeR, BurgeR</Authors>
+    <Authors>Ossie - OssieFromDK</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -28,7 +28,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="henry.ico" />
+    <Content Include="burger.ico" />
   </ItemGroup>
 
   <ItemGroup>
