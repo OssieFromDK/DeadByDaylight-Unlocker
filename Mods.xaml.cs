@@ -116,7 +116,7 @@ namespace FortniteBurger
             Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
             openFileDlg.Title = "Fortnite Burger Custom Mods";
             openFileDlg.DefaultExt = ".pak";
-            openFileDlg.Filter = "Pak Files (.pak)|*.pak";
+            openFileDlg.Filter = "Pak/Bak Files|*.pak;*.bak";
             openFileDlg.InitialDirectory = Environment.CurrentDirectory;
             openFileDlg.Multiselect = true;
             Nullable<bool> result = openFileDlg.ShowDialog();
