@@ -11,7 +11,9 @@
    [![KoFi](https://img.shields.io/badge/Ko%20Fi-Support%20me-ea4aaa.svg?logo=kofi&style=plastic)](https://ko-fi.com/ossiefromdk)
 
    # **Ossie's Dead By Daylight Unlocker (Fortnite Burger)**
-   
+   # ![FortniteBurger1920](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/assets/50819244/f6fa6868-3dcf-4c58-8ffb-a571e9167b8f)
+
+
    I made a discord, feel free to join [here](https://discord.gg/ySsrsYdGwx). It includes some basic FAQ and status stuff, also a ticket system if you need help or have questions directly for me or about the project. Come hang out :D 
 
    ## Maintaining
