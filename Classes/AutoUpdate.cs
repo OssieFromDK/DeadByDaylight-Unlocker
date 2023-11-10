@@ -19,7 +19,6 @@ namespace FortniteBurger.Classes
             AutoUpdater.CheckForUpdateEvent += AutoUpdaterOnCheckForUpdateEvent;
             AutoUpdater.Icon = Resources.Icon;
 
-
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
                 AutoUpdater.Start("https://api.github.com/repos/OssieFromDK/DeadByDaylight-Unlocker/releases/latest");

@@ -80,6 +80,8 @@ namespace FortniteBurger.Classes
             File.Delete(path);
             Directory.Delete(AppDir + "/Mods", true);
             PakBypassedThisSession = true;
+            
+            Mods.ModManager.HasInstalledNewMods = false;
         }
 
         internal async Task LoadSSLBypass()
