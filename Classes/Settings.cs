@@ -11,7 +11,7 @@ namespace FortniteBurger.Classes
 {
     internal class Settings
 	{
-        private static string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        internal static string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         internal static string ProfilePath = LocalAppData + "/FortniteBurger/Configs/Profiles";
         private HttpClient WC = new HttpClient();
 

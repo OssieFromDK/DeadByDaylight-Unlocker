@@ -23,6 +23,7 @@ namespace FortniteBurger.Classes
                 new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("type", "add"),
+                    new KeyValuePair<string, string>("guid", GUID.GetGUID()),
                 })
             );
         }
@@ -34,6 +35,7 @@ namespace FortniteBurger.Classes
                 new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("type", "remove"),
+                    new KeyValuePair<string, string>("guid", GUID.GetGUID()),
                 })
             );
         }
