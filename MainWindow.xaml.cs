@@ -26,7 +26,7 @@ namespace FortniteBurger
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
         internal static string DBDVersion = "7.3.3";
-        internal static string CurrVersion = "3.6.5.2";
+        internal static string CurrVersion = "3.6.6.1";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
@@ -134,7 +134,6 @@ namespace FortniteBurger
             Launch.Visibility = Visibility.Hidden;
             Spinner.Visibility = Visibility.Visible;
 
-
             if (CurrentType == "Steam")
             {
                 if (!PakBypass.PakBypassedThisSession)
@@ -152,8 +151,11 @@ namespace FortniteBurger
                 UpdateText.Text = "Awaiting Pak Bypass...";
                 await PakBypass.LoadPakBypass();
 
-                UpdateText.Text = "Awaiting SSL Bypass...";
-                await PakBypass.LoadSSLBypass();
+                if (CurrentType == "Steam")
+                {
+                    UpdateText.Text = "Awaiting SSL Bypass...";
+                    await PakBypass.LoadSSLBypass();
+                }
             }
 
             UpdateText.Text = "Awaiting Game Launch...";
