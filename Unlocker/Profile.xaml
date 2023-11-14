@@ -1,0 +1,69 @@
+﻿<Page x:Class="FortniteBurger.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FortniteBurger"
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
+      mc:Ignorable="d" 
+      d:DesignHeight="615" d:DesignWidth="850"
+      Title="BP">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Image Source="Images/Background.png" Stretch="UniformToFill"/>
+
+        <TextBlock Text="Fortnite Burger" FontSize="75" Margin="0,25,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+        <TextBlock Text="Profile Editor" FontSize="50" Margin="0,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+
+        <TextBlock Text="Choose Profile Type" FontSize="30" Margin="0,0,0,200" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+
+        <TextBox x:Name="ProfileTypeBox" IsReadOnly="True" Text="Full Profile" TextWrapping="Wrap" FontSize="17"  FontFamily="Tw Cen MT Condensed Extra Bold" Foreground="White" Background="#151318" BorderBrush="Black" BorderThickness="0.5" Margin="0,0,0,75" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Button x:Name="Switch" Content="Switch" 
+                Margin="0,0,0,0"
+                Background="#292d33"
+                Foreground="White"
+                FontFamily="Impact"
+                FontSize="15" 
+                Style="{DynamicResource RoundendButtonStyle1}" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Width="100"
+                Height="30"
+                Visibility="Visible"
+                Click="Switch_Profile"/>
+
+        <Grid x:Name="Full" Visibility="Visible">
+            <TextBlock Text="Item Amount" FontSize="20" Margin="250,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+            <TextBox x:Name="ItemAmountBox" Margin="250,175,0,0" PreviewTextInput="NumberValidationTextBox" Text="1000" TextWrapping="Wrap" FontSize="17"  FontFamily="Tw Cen MT Condensed Extra Bold" Foreground="White" Background="#151318" BorderBrush="Black" BorderThickness="0.5" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+            <TextBlock Text="Prestige Level" FontSize="20" Margin="0,100,250,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+            <TextBox x:Name="PrestigeLevelBox" Margin="0,175,250,0" PreviewTextInput="NumberValidationTextBox" Text="100" TextWrapping="Wrap" FontSize="17"  FontFamily="Tw Cen MT Condensed Extra Bold" Foreground="White" Background="#151318" BorderBrush="Black" BorderThickness="0.5" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        </Grid>
+
+        <TextBlock Text="Choose Extras" FontSize="30" Margin="0,300,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+        <TextBlock Text="Currency Spoof" FontSize="20" Margin="250,375,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+        <CheckBox Click="Currency_Clicked" x:Name="CurrencySpoof" Margin="250,450,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <TextBlock Text="Level Spoof" FontSize="20" Margin="0,375,250,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+        <CheckBox Click="Level_Clicked" x:Name="LevelSpoof" Margin="0,450,250,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+
+
+
+    </Grid>
+</Page>

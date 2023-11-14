@@ -1,0 +1,244 @@
+﻿<Page x:Class="FortniteBurger.Mods"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FortniteBurger"
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
+      mc:Ignorable="d" 
+      d:DesignHeight="615" d:DesignWidth="850"  
+      Title="Mods">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="FocusVisual">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+            <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+            <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+            <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+            <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+            <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+            <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+            <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+            <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+            <Style x:Key="ModButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+                <Setter Property="Background" Value="#121213"/>
+                <Setter Property="BorderBrush" Value="#3A3B3C"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="border" CornerRadius="2" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDefaulted" Value="false">
+                                    <Setter Property="Effect">
+                                        <Setter.Value>
+                                            <DropShadowEffect BlurRadius="5" Direction="0" Opacity="1" ShadowDepth="0" Color="Black" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="BorderBrush" TargetName="border" Value="#ADD8E6"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="true">
+                                    <Setter Property="BorderBrush" TargetName="border" Value="#ADD8E6"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Image Source="Images/Background.png" Stretch="UniformToFill"/>
+
+        <Grid x:Name="MS" Visibility="Collapsed">
+            <TextBlock Text="Fortnite Burger" FontSize="75" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+            <TextBlock Text="Mods" FontSize="50" Margin="0,150,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+
+            <TextBlock Text="Microsoft Store can't use mods" FontSize="50" Margin="0,300,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Red" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+        </Grid>
+        
+        <Grid x:Name="Allowed" Visibility="Visible">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <TextBlock Text="Fortnite Burger" FontSize="75" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+                    <TextBlock Text="Mods" FontSize="50" Margin="0,150,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+
+                    <!-- FOV -->
+                    <Rectangle x:Name="FOV_BG" Margin="0,250,0,0" Width="700" Height="100" Fill="#121213" RadiusX="5" RadiusY="5" Stroke="#3A3B3C" StrokeThickness="1.0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="FOV_Header" Visibility="Visible" FontSize="30" Margin="0,250,440,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="FOV Changer" Width="250" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                    <Label x:Name="FOV_Desc_Label" Visibility="Visible" FontSize="15" Margin="0,300,340,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold">
+                        <TextBlock x:Name="FOV_Desc_Text" TextWrapping="WrapWithOverflow" Text="FOV Changer allows you to change your FOV ingame, as both Killer and Survivor"/>
+                    </Label>
+
+                    <!-- Pre Install - FOV -->
+                    <Button Visibility="Visible" Click="Install" Tag="FOV" Style="{StaticResource ModButtonStyle}" x:Name="FOV_InstallButton"  Content="Install"  FontSize="18" Margin="550,310,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                    <!-- After Install -->
+                    <Grid x:Name="FOV_AfterInstall" Visibility="Hidden">
+                        <Button Visibility="Visible" Click="UnInstall" Tag="FOV" Style="{StaticResource ModButtonStyle}" x:Name="FOV_UnInstallButton" Content="Uninstall" FontSize="18" Margin="550,310,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Button Visibility="Visible" Click="Configure" Tag="FOV" Style="{StaticResource ModButtonStyle}" x:Name="FOV_ConfigureButton" Content="Configure" FontSize="18" Margin="275,310,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </Grid>
+
+                    <Grid x:Name="FOV_Config" Visibility="Hidden">
+                        <!-- Config Area -->
+                        <Button Visibility="Visible" Click="Save" Tag="FOV" Style="{StaticResource ModButtonStyle}" x:Name="FOV_SaveButton"  Content="Save"  FontSize="18" Margin="550,310,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                        <!-- Config IteFOV -->
+                        <Label x:Name="FOV_Input1_Header" Visibility="Visible" FontSize="20" Margin="0,285,550,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Killer FOV" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                        <TextBox x:Name="FOV_Input1" PreviewTextInput="NumberValidationTextBox" Tag="KillerFOV" Visibility="Visible" Text="90" FontSize="17" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Foreground="White" Background="#151318" BorderBrush="#3A3B3C" BorderThickness="1" Margin="0,310,550,0" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+
+                        <!-- Config Item2 -->
+                        <Label x:Name="FOV_Input2_Header" Visibility="Visible" FontSize="20" Margin="0,285,250,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Survivor FOV" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                        <TextBox x:Name="FOV_Input2" PreviewTextInput="NumberValidationTextBox" Tag="SurvivorFOV"  Visibility="Visible" Text="87" FontSize="17" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Foreground="White" Background="#151318" BorderBrush="#3A3B3C" BorderThickness="1" Margin="0,310,250,0" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+                    </Grid>
+
+                    <!-- Killer Revealer -->
+                    <Rectangle x:Name="KR_BG" Margin="0,400,0,0" Width="700" Height="100" Fill="#121213" RadiusX="5" RadiusY="5" Stroke="#3A3B3C" StrokeThickness="1.0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="KR_Header" Visibility="Visible" FontSize="30" Margin="0,400,440,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Killer Revealer" Width="250" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                    <Label x:Name="KR_Desc_Label" Visibility="Visible" FontSize="15" Margin="0,450,340,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold">
+                        <TextBlock x:Name="KR_Desc_Text" TextWrapping="WrapWithOverflow" Text="Allows you to see the killer you will play against, and also their addons"/>
+                    </Label>
+
+                    <!-- Pre Install -->
+                    <Button Visibility="Visible" Click="Install" Tag="KR" Style="{StaticResource ModButtonStyle}" x:Name="KR_InstallButton"  Content="Install"  FontSize="18" Margin="550,460,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                    <!-- After Install -->
+                    <Grid x:Name="KR_AfterInstall" Visibility="Hidden">
+                        <Button Visibility="Visible" Click="UnInstall" Tag="KR" Style="{StaticResource ModButtonStyle}" x:Name="KR_UnInstallButton" Content="Uninstall" FontSize="18" Margin="550,460,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Button IsEnabled="False" Tag="KR" Opacity="0.4" Visibility="Visible" Style="{StaticResource ModButtonStyle}" x:Name="KR_ConfigureButton" Content="Configure" FontSize="18" Margin="275,460,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </Grid>
+
+                    <!-- Red Stain -->
+                    <Rectangle x:Name="RS_BG" Margin="0, 550,0,0" Width="700" Height="100" Fill="#121213" RadiusX="5" RadiusY="5" Stroke="#3A3B3C" StrokeThickness="1.0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="RS_Header" Visibility="Visible" FontSize="30" Margin="0,550,440,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Red Stain Changer" Width="250" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                    <Label x:Name="RS_Desc_Label" Visibility="Visible" FontSize="15" Margin="0,600,340,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold">
+                        <TextBlock x:Name="RS_Desc_Text" TextWrapping="WrapWithOverflow" Text="Allows you to change length, intensity and visibility of the killers red stain"/>
+                    </Label>
+
+                    <!-- Pre Install  -->
+                    <Button Visibility="Visible" Click="Install" Tag="RS" Style="{StaticResource ModButtonStyle}" x:Name="RS_InstallButton"  Content="Install"  FontSize="18" Margin="550,610,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                    <!-- After Install -->
+                    <Grid x:Name="RS_AfterInstall" Visibility="Hidden">
+                        <Button Visibility="Visible" Click="UnInstall" Tag="RS" Style="{StaticResource ModButtonStyle}" x:Name="RS_UnInstallButton" Content="Uninstall" FontSize="18" Margin="550,610,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Button Visibility="Visible" Click="Configure" Tag="RS" Style="{StaticResource ModButtonStyle}" x:Name="RS_ConfigureButton" Content="Configure" FontSize="18" Margin="275,610,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </Grid>
+
+                    <Grid x:Name="RS_Config" Visibility="Hidden">
+                        <!-- Config Area -->
+                        <Button Visibility="Visible" Click="Save" Tag="RS" Style="{StaticResource ModButtonStyle}" x:Name="RS_SaveButton"  Content="Save"  FontSize="18" Margin="550,610,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                        <!-- Config Item -->
+                        <Label x:Name="RS_Input1_Header" Visibility="Visible" FontSize="20" Margin="0,585,550,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Visible Thru Walls" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                        <CheckBox x:Name="RS_Input1_Check" Tag="bCastShadows" IsChecked="False" Margin="0,615,550,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                            </CheckBox.LayoutTransform>
+                        </CheckBox>
+
+                        <!-- Config Item2 -->
+                        <Label x:Name="RS_Input2_Header" Visibility="Visible" FontSize="20" Margin="0,585,250,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Intensity" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                        <TextBox x:Name="RS_Input1" PreviewTextInput="NumberValidationTextBox" Tag="Intensity" Visibility="Visible" Text="25000" FontSize="17" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Foreground="White" Background="#151318" BorderBrush="#3A3B3C" BorderThickness="1" Margin="0,610,250,0" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+
+                        <!-- Config Item3 -->
+                        <Label x:Name="RS_Input3_Header" Visibility="Visible" FontSize="20" Margin="50,585,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Length" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                        <TextBox x:Name="RS_Input2" PreviewTextInput="NumberValidationTextBox" Tag="AttenuationRadius" Visibility="Visible" Text="450" FontSize="17" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Foreground="White" Background="#151318" BorderBrush="#3A3B3C" BorderThickness="1" Margin="50,610,0,0" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+                    </Grid>
+
+                    <!-- Strecthed Res -->
+                    <Rectangle x:Name="RES_BG" Margin="0,700,0,0" Width="700" Height="100" Fill="#121213" RadiusX="5" RadiusY="5" Stroke="#3A3B3C" StrokeThickness="1.0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="RES_Header" Visibility="Visible" FontSize="30" Margin="0,700,440,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Streched Resolution" Width="250" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                    <Label x:Name="RES_Desc_Label" Visibility="Visible" FontSize="15" Margin="0,750,340,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold">
+                        <TextBlock x:Name="RES_Desc_Text" TextWrapping="WrapWithOverflow" Text="Allows you to have stretched resolution without black bars"/>
+                    </Label>
+
+                    <!-- Pre Install  -->
+                    <Button Visibility="Visible" Click="Install" Tag="RES" Style="{StaticResource ModButtonStyle}" x:Name="RES_InstallButton"  Content="Install"  FontSize="18" Margin="550,760,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                    <!-- After Install -->
+                    <Grid x:Name="RES_AfterInstall" Visibility="Hidden">
+                        <Button Visibility="Visible" Click="UnInstall" Tag="RES" Style="{StaticResource ModButtonStyle}" x:Name="RES_UnInstallButton" Content="Uninstall" FontSize="18" Margin="550,760,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Button Visibility="Visible" Click="Configure" Tag="RES" Style="{StaticResource ModButtonStyle}" x:Name="RES_ConfigureButton" Content="Configure" FontSize="18" Margin="275,760,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </Grid>
+
+                    <Grid x:Name="RES_Config" Visibility="Hidden">
+                        <!-- Config Area -->
+                        <Button Visibility="Visible" Click="Save" Tag="RES" Style="{StaticResource ModButtonStyle}" x:Name="RES_SaveButton"  Content="Save"  FontSize="18" Margin="550,760,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                        <!-- Config Item -->
+                        <Label x:Name="RES_Input1_Header" Visibility="Visible" FontSize="20" Margin="0,735,550,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Desired Width" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                        <TextBox x:Name="RES_Input1" PreviewTextInput="NumberValidationTextBox" Visibility="Visible" Text="1920" FontSize="17" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Foreground="White" Background="#151318" BorderBrush="#3A3B3C" BorderThickness="1" Margin="0,760,550,0" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+
+                        <!-- Config Item2 -->
+                        <Label x:Name="RES_Input2_Header" Visibility="Visible" FontSize="20" Margin="0,735,250,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Desired Height" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                        <TextBox x:Name="RES_Input2" PreviewTextInput="NumberValidationTextBox" Visibility="Visible" Text="1080" FontSize="17" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Foreground="White" Background="#151318" BorderBrush="#3A3B3C" BorderThickness="1" Margin="0,760,250,0" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+                    </Grid>
+
+                    <!-- Corn Remover -->
+                    <Rectangle x:Name="Corn_BG" Margin="0,850,0,0" Width="700" Height="100" Fill="#121213" RadiusX="5" RadiusY="5" Stroke="#3A3B3C" StrokeThickness="1.0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="Corn_Header" Visibility="Visible" FontSize="30" Margin="0,850,440,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Corn Remover" Width="250" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                    <Label x:Name="Corn_Desc_Label" Visibility="Visible" FontSize="15" Margin="0,900,340,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold">
+                        <TextBlock x:Name="Corn_Desc_Text" TextWrapping="WrapWithOverflow" Text="Completely removes all the corn from the Coldwind Farm"/>
+                    </Label>
+
+                    <!-- Pre Install  -->
+                    <Button Visibility="Visible" Click="Install" Tag="Corn" Style="{StaticResource ModButtonStyle}" x:Name="Corn_InstallButton"  Content="Install"  FontSize="18" Margin="550,910,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                    <!-- After Install -->
+                    <Grid x:Name="Corn_AfterInstall" Visibility="Hidden">
+                        <Button Visibility="Visible" Click="UnInstall" Tag="Corn" Style="{StaticResource ModButtonStyle}" x:Name="Corn_UnInstallButton" Content="Uninstall" FontSize="18" Margin="550,910,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Button  IsEnabled="False" Tag="Corn" Opacity="0.4" Visibility="Visible" Style="{StaticResource ModButtonStyle}" x:Name="Corn_ConfigureButton" Content="Configure" FontSize="18" Margin="275,910,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </Grid>
+
+                    <!-- Old Animations -->
+                    <Rectangle x:Name="OA_BG" Margin="0,1000,0,0" Width="700" Height="100" Fill="#121213" RadiusX="5" RadiusY="5" Stroke="#3A3B3C" StrokeThickness="1.0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="OA_Header" Visibility="Visible" FontSize="30" Margin="0,1000,440,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Old Animations" Width="250" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                    <Label x:Name="OA_Desc_Label" Visibility="Visible" FontSize="15" Margin="0,1050,340,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold">
+                        <TextBlock x:Name="OA_Desc_Text" TextWrapping="WrapWithOverflow" Text="Get the old animations for survivor, from before the new survivor animations were made"/>
+                    </Label>
+
+                    <!-- Pre Install  -->
+                    <Button Visibility="Visible" Click="Install" Tag="OA" Style="{StaticResource ModButtonStyle}" x:Name="OA_InstallButton"  Content="Install"  FontSize="18" Margin="550,1060,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                    <!-- After Install -->
+                    <Grid x:Name="OA_AfterInstall" Visibility="Hidden">
+                        <Button Visibility="Visible" Click="UnInstall" Tag="OA" Style="{StaticResource ModButtonStyle}" x:Name="OA_UnInstallButton" Content="Uninstall" FontSize="18" Margin="550,1060,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Button  IsEnabled="False" Tag="OA" Opacity="0.4" Visibility="Visible" Style="{StaticResource ModButtonStyle}" x:Name="OA_ConfigureButton" Content="Configure" FontSize="18" Margin="275,1060,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </Grid>
+
+                    <!-- Custom Mods -->
+                    <Rectangle x:Name="Custom" Margin="0,1150,0,0" Width="700" Height="100" Fill="#121213" RadiusX="5" RadiusY="5" Stroke="#3A3B3C" StrokeThickness="1.0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="Custom_Header" Visibility="Visible" FontSize="30" Margin="0,1150,440,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Custom Mods" Width="250" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold" />
+                    <Label x:Name="Custom_Desc_Label" Visibility="Visible" FontSize="15" Margin="0,1200,340,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold">
+                        <TextBlock x:Name="Custom_Desc_Text" TextWrapping="WrapWithOverflow" Text="Add your own mods, these will be loaded together with the other mods on launch"/>
+                    </Label>
+
+                    <Button Visibility="Visible" Click="Browse" Tag="Custom" Style="{StaticResource ModButtonStyle}" x:Name="Custom_InstallButton"  Content="Browse"  FontSize="18" Margin="550,1210,0,0" HorizontalContentAlignment="Center" Width="125" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                    <Separator Margin="0,1150,0,0" Height="150" VerticalAlignment="Top" Background="Transparent"/>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
