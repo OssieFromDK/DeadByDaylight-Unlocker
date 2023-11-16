@@ -144,6 +144,9 @@ namespace FortniteBurger
 
                     UpdateText.Text = "Awaiting SSL Bypass...";
                     await PakBypass.LoadSSLBypass();
+
+                    UpdateText.Text = "Awaiting Offerings...";
+                    await PakBypass.LoadOfferings();
                 }
             }
 
@@ -157,6 +160,9 @@ namespace FortniteBurger
                     UpdateText.Text = "Awaiting SSL Bypass...";
                     await PakBypass.LoadSSLBypass();
                 }
+
+                UpdateText.Text = "Awaiting Offerings...";
+                await PakBypass.LoadOfferings();
             }
 
             UpdateText.Text = "Awaiting Game Launch...";

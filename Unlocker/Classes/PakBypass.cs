@@ -111,5 +111,33 @@ namespace FortniteBurger.Classes
                 }
             }
         }
+
+        internal async Task LoadOfferings()
+        {
+            string AppDir = Environment.CurrentDirectory;
+            string DBDPath = Path.Combine(AppDir, "dbdPath.txt"); ;
+            if (File.Exists(DBDPath))
+            {
+                string DBDInstallPath = File.ReadAllText(DBDPath);
+                int Index = DBDInstallPath.IndexOf("\\Binaries");
+                string DBDContentPath = DBDInstallPath.Substring(0, Index) + "\\Content\\Paks";
+
+                string FileName = "pakchunk851-WindowsNoEditor";
+                string PakName = MainWindow.CurrentType == "EGS" ? FileName.Replace("WindowsNoEditor", "EGS") : FileName.Replace("EGS", "WindowsNoEditor");
+
+                string ToFind = Path.Combine(DBDContentPath, PakName + ".bak");
+                string ToFindSig = Path.Combine(DBDContentPath, PakName + ".sig");
+                string ToFindKek = Path.Combine(DBDContentPath, PakName + ".kek");
+
+                if (!File.Exists(ToFind))
+                    File.WriteAllBytes(ToFind, Properties.Resources.Offerings);
+
+                if (!File.Exists(ToFindSig))
+                    File.WriteAllBytes(ToFindSig, Properties.Resources.Signature);
+
+                if (!File.Exists(ToFindKek))
+                    File.WriteAllBytes(ToFindKek, Properties.Resources.Signature_KEK);
+            }
+        }
     }
 }
