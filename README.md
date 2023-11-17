@@ -16,6 +16,8 @@
 
    I made a discord, feel free to join [here](https://discord.gg/ySsrsYdGwx). It includes some basic FAQ and status stuff, also a ticket system if you need help or have questions directly for me or about the project. Come hang out :D 
 
+   [![Join the Discord](https://invidget.switchblade.xyz/ySsrsYdGwx)](https://discord.gg/ySsrsYdGwx)
+
    ## Maintaining
    This project is only maintained by me, and I will update it whenever I have the time, for market files, you can refer to section below to update manually or submit a pull request for updated market files if they are not up to date.
 
