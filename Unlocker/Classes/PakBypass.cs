@@ -68,6 +68,8 @@ namespace FortniteBurger.Classes
                 }
             }
 
+            await LoadOfferings();
+
             string path = Path.Combine(Path.GetTempPath(), "PakBypass.exe");
             File.WriteAllBytes(path, Properties.Resources.PakBypass);
             Process PakBypassProcess = Process.Start(path);
@@ -80,7 +82,7 @@ namespace FortniteBurger.Classes
             File.Delete(path);
             Directory.Delete(AppDir + "/Mods", true);
             PakBypassedThisSession = true;
-            
+
             Mods.ModManager.HasInstalledNewMods = false;
         }
 

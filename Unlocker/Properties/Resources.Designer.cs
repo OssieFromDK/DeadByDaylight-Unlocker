@@ -123,6 +123,16 @@ namespace FortniteBurger.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Offerings {
+            get {
+                object obj = ResourceManager.GetObject("Offerings", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] OldAnim {
             get {
                 object obj = ResourceManager.GetObject("OldAnim", resourceCulture);
