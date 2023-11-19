@@ -120,7 +120,7 @@ namespace FortniteBurger
                 return;
             }
 
-            if(profile.FullProfile)
+            if (profile.FullProfile)
             {
                 Classes.Utils.UpdateProfiles(int.Parse(profile.PrestigeLevelBox.Text), int.Parse(profile.ItemAmountBox.Text));
             }
