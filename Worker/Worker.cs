@@ -20,11 +20,22 @@ namespace BurgerWorker
 
         static void Main(string[] args)
         {
-            Process BurgerProcess = Process.GetProcessesByName("FortniteBurger")[0];
             RPCClient = new DiscordRPC("1173063895582257162");
             ApiClient.DefaultRequestHeaders.UserAgent.ParseAdd("burger");
             bool RPCActive = false;
             bool HasSet = false;
+            Process[] BurgerProcesses = Process.GetProcessesByName("FortniteBurger");
+            Process? BurgerProcess = null;
+
+            if (BurgerProcesses.Length > 0)
+            {
+                BurgerProcess = BurgerProcesses[0];
+            }
+            else
+            {
+                ShutDown(RPCClient);
+                Environment.Exit(0);
+            }
 
             while (true)
             {
@@ -72,44 +83,7 @@ namespace BurgerWorker
                 }
                 else
                 {
-                    // Remove Proxy Settings
-                    try
-                    {
-                        RegistryKey RegKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
-
-                        if (RegKey != null)
-                        {
-                            object ProxyEnabled = RegKey?.GetValue("ProxyEnable");
-
-                            if (ProxyEnabled?.ToString() == "1")
-                            {
-                                RegKey?.SetValue("ProxyEnable", 0, RegistryValueKind.DWord);
-                            }
-                        }
-                    } catch(Exception ex) {}
-
-
-                    // Remove User Count
-                    try
-                    {
-                        if (!Directory.Exists(LocalAppData + "/FortniteBurger/Settings")) continue;
-                        if (!File.Exists(LocalAppData + "/FortniteBurger/Settings/UUID.txt")) continue;
-
-                        string GUID = File.ReadAllText(LocalAppData + "/FortniteBurger/Settings/UUID.txt");
-
-                        if (!string.IsNullOrEmpty(GUID))
-                        {
-                            RemoveUser(GUID);
-                        }
-                    } catch(Exception ex) { }
-
-
-                    // Shut down RPC
-                    try
-                    {
-                        RPCClient.Dispose();
-                    } catch( Exception ex) { }
-
+                    ShutDown(RPCClient);
                     break;
                 }
 
@@ -146,6 +120,52 @@ namespace BurgerWorker
             {
                 UseRPC = (bool)SettingsObj["RPC"];
             }
+        }
+
+        internal static void ShutDown(DiscordRPC rpc)
+        {
+            try
+            {
+                RegistryKey RegKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
+
+                if (RegKey != null)
+                {
+                    object ProxyEnabled = RegKey?.GetValue("ProxyEnable");
+
+                    if (ProxyEnabled?.ToString() == "1")
+                    {
+                        RegKey?.SetValue("ProxyEnable", 0, RegistryValueKind.DWord);
+                    }
+                }
+            }
+            catch (Exception ex) { }
+
+
+            // Remove User Count
+            try
+            {
+                if (Directory.Exists(LocalAppData + "/FortniteBurger/Settings"))
+                {
+                    if (File.Exists(LocalAppData + "/FortniteBurger/Settings/UUID.txt"))
+                    {
+                        string GUID = File.ReadAllText(LocalAppData + "/FortniteBurger/Settings/UUID.txt");
+
+                        if (!string.IsNullOrEmpty(GUID))
+                        {
+                            RemoveUser(GUID);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { }
+
+
+            // Shut down RPC
+            try
+            {
+                rpc.Dispose();
+            }
+            catch (Exception ex) { }
         }
     }
 }

@@ -26,7 +26,7 @@ namespace FortniteBurger
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
         internal static string DBDVersion = "7.3.3";
-        internal static string CurrVersion = "3.6.6.2";
+        internal static string CurrVersion = "3.6.6.3";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
@@ -144,9 +144,6 @@ namespace FortniteBurger
 
                     UpdateText.Text = "Awaiting SSL Bypass...";
                     await PakBypass.LoadSSLBypass();
-
-                    UpdateText.Text = "Awaiting Offerings...";
-                    await PakBypass.LoadOfferings();
                 }
             }
 
@@ -160,9 +157,6 @@ namespace FortniteBurger
                     UpdateText.Text = "Awaiting SSL Bypass...";
                     await PakBypass.LoadSSLBypass();
                 }
-
-                UpdateText.Text = "Awaiting Offerings...";
-                await PakBypass.LoadOfferings();
             }
 
             UpdateText.Text = "Awaiting Game Launch...";
