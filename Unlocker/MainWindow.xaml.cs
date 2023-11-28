@@ -25,8 +25,8 @@ namespace FortniteBurger
         internal static Overlay currentOverlay;
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
-        internal static string DBDVersion = "7.3.3";
-        internal static string CurrVersion = "3.6.6.3";
+        internal static string DBDVersion = "7.4.0";
+        internal static string CurrVersion = "3.7.0";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
@@ -114,54 +114,60 @@ namespace FortniteBurger
 
         private async void Launch_Pressed(object sender, RoutedEventArgs e)
         {
-            if (Classes.Utils.IsPakBypassRunning())
+            try
             {
-                UpdateText.Text = "Finish Pak Bypass before launching";
-                return;
-            }
+                if (Classes.Utils.IsPakBypassRunning())
+                {
+                    UpdateText.Text = "Finish Pak Bypass before launching";
+                    return;
+                }
 
-            if (profile.FullProfile)
-            {
-                Classes.Utils.UpdateProfiles(int.Parse(profile.PrestigeLevelBox.Text), int.Parse(profile.ItemAmountBox.Text));
-            }
+                if (profile.FullProfile)
+                {
+                    Classes.Utils.UpdateProfiles(int.Parse(profile.PrestigeLevelBox.Text), int.Parse(profile.ItemAmountBox.Text));
+                }
 
-            if (Classes.FiddlerCore.FiddlerIsRunning)
-            {
-                Classes.FiddlerCore.StopFiddlerCore();
-            }
+                if (Classes.FiddlerCore.FiddlerIsRunning)
+                {
+                    Classes.FiddlerCore.StopFiddlerCore();
+                }
 
-            Classes.FiddlerCore.StartFiddlerCore();
+                Classes.FiddlerCore.StartFiddlerCore();
 
-            Launch.Visibility = Visibility.Hidden;
-            Spinner.Visibility = Visibility.Visible;
+                Launch.Visibility = Visibility.Hidden;
+                Spinner.Visibility = Visibility.Visible;
 
-            if (CurrentType == "Steam")
-            {
-                if (!PakBypass.PakBypassedThisSession)
+                if (CurrentType == "Steam")
+                {
+                    if (!PakBypass.PakBypassedThisSession)
+                    {
+                        UpdateText.Text = "Awaiting Pak Bypass...";
+                        await PakBypass.LoadPakBypass();
+
+                        UpdateText.Text = "Awaiting SSL Bypass...";
+                        await PakBypass.LoadSSLBypass();
+                    }
+                }
+
+                if (Classes.Mods.ModManager.HasInstalledNewMods) // Prevent Violation Error Crash
                 {
                     UpdateText.Text = "Awaiting Pak Bypass...";
                     await PakBypass.LoadPakBypass();
 
-                    UpdateText.Text = "Awaiting SSL Bypass...";
-                    await PakBypass.LoadSSLBypass();
+                    if (CurrentType == "Steam")
+                    {
+                        UpdateText.Text = "Awaiting SSL Bypass...";
+                        await PakBypass.LoadSSLBypass();
+                    }
                 }
-            }
 
-            if (Classes.Mods.ModManager.HasInstalledNewMods) // Prevent Violation Error Crash
+                UpdateText.Text = "Awaiting Game Launch...";
+                Classes.Launcher.LaunchDBD(CurrentType);
+                Classes.Utils.CheckForGameRunning(CurrentType);
+            } catch(Exception ex)
             {
-                UpdateText.Text = "Awaiting Pak Bypass...";
-                await PakBypass.LoadPakBypass();
-
-                if (CurrentType == "Steam")
-                {
-                    UpdateText.Text = "Awaiting SSL Bypass...";
-                    await PakBypass.LoadSSLBypass();
-                }
+                System.Windows.MessageBox.Show(ex.Message);
             }
-
-            UpdateText.Text = "Awaiting Game Launch...";
-            Classes.Launcher.LaunchDBD(CurrentType);
-            Classes.Utils.CheckForGameRunning(CurrentType);
         }
 
         internal Timer Timer = new Timer() { Interval = 250 };
