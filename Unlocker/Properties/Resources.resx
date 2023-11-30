@@ -136,9 +136,6 @@
   <data name="OldAnim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pakchunk999-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PakBypass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PakBypass.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="RedStain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pakchunk872-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -153,6 +150,9 @@
   </data>
   <data name="BurgerWorker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BurgerWorker.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PakBypass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PakBypass.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Signature" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signature.sig;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
