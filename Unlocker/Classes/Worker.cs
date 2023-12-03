@@ -8,7 +8,7 @@ namespace FortniteBurger.Classes
     {
         internal static void LoadWorker()
         {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/Microsoft/Windows/Start Menu/Programs/Startup/BurgerWorker.exe";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "/BurgerWorker.exe";
 
             if (File.Exists(path))
             {
