@@ -17,7 +17,11 @@ namespace FortniteBurger.Classes
 
             File.WriteAllBytes(path, Properties.Resources.BurgerWorker);
 
-            Process.Start(path);
+            Process.Start(new ProcessStartInfo()
+            {
+                FileName = path,
+                UseShellExecute = true
+            });
         }
     } 
 }
