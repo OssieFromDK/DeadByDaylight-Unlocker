@@ -17,7 +17,7 @@ namespace FortniteBurger
 
             UpdateText.Text = "Checking for updates...";
             Spinner.Visibility = Visibility.Visible;
-            await Task.Delay(2500);
+            await Task.Delay(1000);
             MainWindow.AutoUpdater.CheckForUpdates();
         }
 

@@ -79,6 +79,15 @@ namespace FortniteBurger.Classes
                 UseShellExecute = true
             });
 
+            PakBypassProcess.Close();
+
+            Process[] BypassProcesses = Process.GetProcessesByName("PakBypass");
+
+            if (BypassProcesses.Length > 0)
+            {
+                PakBypassProcess = BypassProcesses[0];
+            }
+
             while (!PakBypassProcess.HasExited)
             {
                 await Task.Delay(1000);
