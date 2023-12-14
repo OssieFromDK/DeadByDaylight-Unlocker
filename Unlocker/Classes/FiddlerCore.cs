@@ -171,8 +171,8 @@ namespace FortniteBurger.Classes
             if ((oSession.uriContains("api/v1/extensions/playerLevels/getPlayerLevel")  || oSession.uriContains("api/v1/extensions/playerLevels/earnPlayerXp")) && MainWindow.profile.Level_Spoof)
                 oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Level.json";
 
-           //if (oSession.uriContains("/catalog") && (MainWindow.profile.Break_Skins) && !MainWindow.profile.Off) Catalog isn't working rn and causes skins to not work
-           //     oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Catalog.json";
+           if (oSession.uriContains("/catalog") && (MainWindow.profile.Break_Skins) && !MainWindow.profile.Off)
+                oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Catalog.json";
 
             if (oSession.uriContains("itemsKillswitch") && (MainWindow.profile.Disabled) && !MainWindow.profile.Off)
                 oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Disabled.json";
