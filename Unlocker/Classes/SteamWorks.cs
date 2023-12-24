@@ -1,4 +1,4 @@
-﻿using Steamworks;
+using Steamworks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +51,7 @@ namespace FortniteBurger.Classes
                 {
                     foreach (string sessionValue in sessionValues)
                     {
-                        int index = sessionValue.IndexOf(";");
+                        int index = sessionValue.IndexOf(';');
                         string session = sessionValue.Substring(0, index);
                         CookieHandler.SetCookie(session);
                         MainWindow.cookie.ReturnFromCookie("Successfully Grabbed Cookie", true);
