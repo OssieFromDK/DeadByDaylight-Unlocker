@@ -1,4 +1,4 @@
-﻿using Fiddler;
+using Fiddler;
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
@@ -10,10 +10,10 @@ namespace FortniteBurger.Classes
     internal class FiddlerCore
     {
         public static bool FiddlerIsRunning = false;
-        internal static SessionStateHandler GrabWithShutdown = new SessionStateHandler(CookieGrabWithShutdown);
-        internal static SessionStateHandler GrabWithoutShutdown = new SessionStateHandler(CookieGrabWithoutShutdown);
-        internal static SessionStateHandler LaunchedWithProfileEditor = new SessionStateHandler(ProfileEditor);
-        internal static SessionStateHandler LaunchLobbyInfo = new SessionStateHandler(LobbyInfo);
+        internal static SessionStateHandler GrabWithShutdown = new(CookieGrabWithShutdown);
+        internal static SessionStateHandler GrabWithoutShutdown = new(CookieGrabWithoutShutdown);
+        internal static SessionStateHandler LaunchedWithProfileEditor = new(ProfileEditor);
+        internal static SessionStateHandler LaunchLobbyInfo = new(LobbyInfo);
 
         private static void EnsureRootCertGrabber()
         {
@@ -25,7 +25,7 @@ namespace FortniteBurger.Classes
             X509Certificate2 rootCertificate = CertMaker.GetRootCertificate();
             rootCertificate.FriendlyName = "FortniteBurger";
             File.WriteAllBytes(path, rootCertificate.Export(X509ContentType.Cert));
-            X509Store x509Store = new X509Store(StoreName.Root, StoreLocation.CurrentUser);
+            X509Store x509Store = new(StoreName.Root, StoreLocation.CurrentUser);
             x509Store.Open(OpenFlags.ReadWrite);
             x509Store.Add(rootCertificate);
             x509Store.Close();

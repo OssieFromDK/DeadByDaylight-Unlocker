@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
@@ -9,15 +9,15 @@ namespace FortniteBurger
     public partial class MainWindow : Window
     {
         internal static Classes.AutoUpdate AutoUpdater = new Classes.AutoUpdate();
-        internal static UpdateScreen UpdateScreen = new UpdateScreen();
-        internal static Cookie cookie = new Cookie();
-        internal static Tome tome = new Tome();
-        internal static BP bp = new BP();
-        internal static BPTools BPTools = new BPTools();
-        internal static Profile profile = new Profile();
+        internal static UpdateScreen UpdateScreen = new();
+        internal static Cookie cookie = new();
+        internal static Tome tome = new();
+        internal static BP bp = new();
+        internal static BPTools BPTools = new();
+        internal static Profile profile = new();
         internal static MainWindow main;
-        internal static Settings settingspage = new Settings();
-        internal static Mods mods = new Mods();
+        internal static Settings settingspage = new();
+        internal static Mods mods = new();
         internal static Classes.Settings settings = new Classes.Settings();
         internal static Classes.PakBypass PakBypass = new Classes.PakBypass();
         //internal static Classes.LobbyInfo LobbyInfo = new Classes.LobbyInfo();
@@ -170,7 +170,10 @@ namespace FortniteBurger
             }
         }
 
-        internal Timer Timer = new Timer() { Interval = 250 };
+        internal Timer Timer = new()
+{
+    Interval = 250
+};
 
         private void StartChecking()
         {
