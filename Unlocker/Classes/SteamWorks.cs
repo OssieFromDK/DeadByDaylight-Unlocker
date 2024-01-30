@@ -1,4 +1,4 @@
-using Steamworks;
+﻿using Steamworks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,11 +31,11 @@ namespace FortniteBurger.Classes
                 return;
             }
 
-            using (HttpClient client = new())
+            using (HttpClient client = new HttpClient())
             {
-                StringContent bodyContent = new("{\"clientData\":{}}");
+                StringContent bodyContent = new StringContent("{\"clientData\":{}}");
                 bodyContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                HttpRequestMessage request = new(HttpMethod.Post, "https://steam.live.bhvrdbd.com/api/v1/auth/provider/steam/login?token=" + ticket);
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "https://steam.live.bhvrdbd.com/api/v1/auth/provider/steam/login?token=" + ticket);
                 request.Headers.Add("Accept", "*/*");
                 request.Headers.Add("Accept-Encoding", "deflate, gzip");
                 request.Headers.Add("x-kraken-client-platform", "egs");
@@ -51,7 +51,7 @@ namespace FortniteBurger.Classes
                 {
                     foreach (string sessionValue in sessionValues)
                     {
-                        int index = sessionValue.IndexOf(';');
+                        int index = sessionValue.IndexOf(";");
                         string session = sessionValue.Substring(0, index);
                         CookieHandler.SetCookie(session);
                         MainWindow.cookie.ReturnFromCookie("Successfully Grabbed Cookie", true);

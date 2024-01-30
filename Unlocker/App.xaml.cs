@@ -28,12 +28,15 @@ namespace FortniteBurger
 
         private void DispatcherOnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs dispatcherUnhandledExceptionEventArgs)
         {
-            Classes.CloseManager.Close();
+            Classes.CloseManager.Close(true, dispatcherUnhandledExceptionEventArgs.Exception.Message);
         }
 
         private static void CurrentDomainOnUnhandledException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)
         {
-            Classes.CloseManager.Close();
+            Exception exception = (Exception)unhandledExceptionEventArgs.ExceptionObject;
+            var message = exception.Message;
+
+            Classes.CloseManager.Close(true, message);
         }
 
         private void SessionEndingShutdown(object sender, SessionEndingCancelEventArgs unhandledExceptionEventArgs)

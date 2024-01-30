@@ -51,7 +51,7 @@ namespace FortniteBurger.Classes
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MainWindow.ErrorLog.CreateLog(ex.Message);
                     }
                 }
                 else

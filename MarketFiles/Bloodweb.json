@@ -67,32 +67,32 @@
       {
         "nodeData": [
           {
-            "contentId": "ADDON_Chainsaw_HomemadeMuffler",
+            "contentId": "Addon_DreamInducer_WoolShirt",
             "nodeId": 101,
             "state": "Available"
           },
           {
-            "contentId": "Addon_Trickster_17",
+            "contentId": "Addon_Kanobo_LionFang",
             "nodeId": 102,
             "state": "Available"
           },
           {
-            "contentId": "Item_Camper_K29InfectionRemover",
+            "contentId": "ADDON_TormentMode_CrimsonCeremoneyBook",
             "nodeId": 103,
             "state": "Available"
           },
           {
-            "contentId": "ADDON_LFChainsaw_VegetableOil",
+            "contentId": "Addon_K26Power_16",
             "nodeId": 104,
             "state": "Available"
           },
           {
-            "contentId": "Addon_Spark_PolishedElectrode",
+            "contentId": "ADDON_Lastbreath_KavanaghLastBreath",
             "nodeId": 105,
             "state": "Available"
           },
           {
-            "contentId": "ADDON_LFChainsaw_SpeedLimiter",
+            "contentId": "Addon_Blinker_002",
             "nodeId": 106,
             "state": "Available"
           }
@@ -101,62 +101,62 @@
       {
         "nodeData": [
           {
-            "contentId": "Addon_Map_007",
+            "contentId": "Addon_Stalker_TombstonePiece",
             "nodeId": 201,
             "state": "Available"
           },
           {
-            "contentId": "ADDON_LFChainsaw_TheGrease",
+            "contentId": "Addon_ReverseBearTrap_RuleSetN2",
             "nodeId": 202,
             "state": "Available"
           },
           {
-            "contentId": "Addon_Kanobo_ChildsWoodenSword",
+            "contentId": "RedMoney",
             "nodeId": 203,
             "state": "Available"
           },
           {
-            "contentId": "Addon_GasBomb_18",
+            "contentId": "ADDON_TormentMode_ForgottenVideotape",
             "nodeId": 204,
             "state": "Available"
           },
           {
-            "contentId": "Addon_Plague_DevoteesAmulet",
+            "contentId": "MeteorThemeOffering",
             "nodeId": 205,
             "state": "Available"
           },
           {
-            "contentId": "ColdwindCattleTag81",
+            "contentId": "Item_Camper_MedKit03",
             "nodeId": 206,
             "state": "Available"
           },
           {
-            "contentId": "ADDON_LFChainsaw_BegrimedChain",
+            "contentId": "NewMoonBouquet",
             "nodeId": 207,
             "state": "Available"
           },
           {
-            "contentId": "Addon_K31_08",
+            "contentId": "Item_Camper_WornoutToolbox",
             "nodeId": 208,
             "state": "Available"
           },
           {
-            "contentId": "Addon_K32_03",
+            "contentId": "Addon_K31_14",
             "nodeId": 209,
             "state": "Available"
           },
           {
-            "contentId": "ADDON_trap_DiamondStone",
+            "contentId": "Item_Camper_Toolbox",
             "nodeId": 210,
             "state": "Available"
           },
           {
-            "contentId": "Addon_K32_13",
+            "contentId": "Addon_ReverseBearTrap_CrateofGears",
             "nodeId": 211,
             "state": "Available"
           },
           {
-            "contentId": "Addon_GasBomb_20a",
+            "contentId": "Addon_K32_19",
             "nodeId": 212,
             "state": "Available"
           }
@@ -165,92 +165,92 @@
       {
         "nodeData": [
           {
-            "contentId": "FragrantSweetWilliam",
+            "contentId": "Addon_Stalker_DeadRabbit",
             "nodeId": 301,
             "state": "Available"
           },
           {
-            "contentId": "Addon_ReverseBearTrap_JigsawsAnnotatedPlan",
+            "contentId": "Addon_GasBomb_20b",
             "nodeId": 302,
             "state": "Available"
           },
           {
-            "contentId": "Addon_TheOnryo_16",
+            "contentId": "Addon_Stalker_BlondHair",
             "nodeId": 303,
             "state": "Available"
           },
           {
-            "contentId": "Addon_Rush_PlaceboTablet",
+            "contentId": "Addon_PhaseWalker_BloodyHairBrooch",
             "nodeId": 304,
             "state": "Available"
           },
           {
-            "contentId": "Addon_DreamInducer_KidsDrawing",
+            "contentId": "Addon_K22Power_6",
             "nodeId": 305,
             "state": "Available"
           },
           {
-            "contentId": "Addon_K25Power_12",
+            "contentId": "Addon_Bell_004",
             "nodeId": 306,
             "state": "Available"
           },
           {
-            "contentId": "Addon_K22Power_2",
+            "contentId": "Addon_Hatchet_MannaGrassBraid",
             "nodeId": 307,
             "state": "Available"
           },
           {
-            "contentId": "Addon_K22Power_6",
+            "contentId": "Addon_Stalker_HairBrush",
             "nodeId": 308,
             "state": "Available"
           },
           {
-            "contentId": "Item_Camper_DullKey",
+            "contentId": "NewMoonBouquet",
             "nodeId": 309,
             "state": "Available"
           },
           {
-            "contentId": "Addon_GasBomb_07",
+            "contentId": "Addon_Harpoon_SnakeOil",
             "nodeId": 310,
             "state": "Available"
           },
           {
-            "contentId": "Addon_TheOnryo_12",
+            "contentId": "Addon_K24Power_12",
             "nodeId": 311,
             "state": "Available"
           },
           {
-            "contentId": "ADDON_Frenzy_IridescentButton",
+            "contentId": "Item_Camper_BrokenKey",
             "nodeId": 312,
             "state": "Available"
           },
           {
-            "contentId": "Addon_K31_08",
+            "contentId": "Addon_Spark_CalmClassI",
             "nodeId": 313,
             "state": "Available"
           },
           {
-            "contentId": "ADDON_TormentMode_RustcoloredEgg",
+            "contentId": "Addon_Plague_HealingSalve",
             "nodeId": 314,
             "state": "Available"
           },
           {
-            "contentId": "Addon_K32_20",
+            "contentId": "Addon_K31_05",
             "nodeId": 315,
             "state": "Available"
           },
           {
-            "contentId": "Addon_Spark_RestraintClassIII",
+            "contentId": "Addon_PhaseWalker_YakuyokeAmulet",
             "nodeId": 316,
             "state": "Available"
           },
           {
-            "contentId": "Addon_Rush_RoseTonic",
+            "contentId": "Addon_Demogorgon_RatTail",
             "nodeId": 317,
             "state": "Available"
           },
           {
-            "contentId": "Addon_Spark_RestraintMuYisNotes",
+            "contentId": "Addon_K32_07",
             "nodeId": 318,
             "state": "Available"
           }
@@ -259,7 +259,7 @@
       {
         "nodeData": [
           {
-            "contentId": "Addon_ReverseBearTrap_SlowReleasingToxin",
+            "contentId": "Addon_Map_008",
             "nodeId": 401,
             "state": "Available"
           }
@@ -457,34 +457,6 @@
       "quantity": 500
     },
     {
-      "itemId": "ADDON_Chainsaw_CarburatorGuide",
-      "quantity": 500
-    },
-    {
-      "itemId": "ADDON_Chainsaw_DeathEngravings",
-      "quantity": 500
-    },
-    {
-      "itemId": "ADDON_Chainsaw_DoomEngravings",
-      "quantity": 500
-    },
-    {
-      "itemId": "ADDON_Chainsaw_HomemadeMuffler",
-      "quantity": 500
-    },
-    {
-      "itemId": "ADDON_Chainsaw_LightChassis",
-      "quantity": 500
-    },
-    {
-      "itemId": "ADDON_Chainsaw_ThompsonMix",
-      "quantity": 500
-    },
-    {
-      "itemId": "ADDON_Chainsaw_ThompsonMoonshine",
-      "quantity": 500
-    },
-    {
       "itemId": "ADDON_flashlight_highendsapphire",
       "quantity": 500
     },
@@ -662,58 +634,6 @@
     },
     {
       "itemId": "Addon_Bell_012",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_001",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_002",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_003",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_004",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_005",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_006",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_007",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_008",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_009",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_010",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_011",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_Chainsaw_012",
-      "quantity": 500
-    },
-    {
-      "itemId": "Addon_HillbillyChainsaw_IridescentBrick",
       "quantity": 500
     },
     {
@@ -3421,6 +3341,86 @@
       "quantity": 500
     },
     {
+      "itemId": "Addon_Chainsaw_002",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_011",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_005",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_001",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_003",
+      "quantity": 500
+    },
+    {
+      "itemId": "ADDON_Chainsaw_DeathEngravings",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_012",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_004",
+      "quantity": 500
+    },
+    {
+      "itemId": "ADDON_Chainsaw_ThompsonMoonshine",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_007",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_006",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_008",
+      "quantity": 500
+    },
+    {
+      "itemId": "ADDON_Chainsaw_LightChassis",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_010",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_Chainsaw_009",
+      "quantity": 500
+    },
+    {
+      "itemId": "ADDON_Chainsaw_ThompsonMix",
+      "quantity": 500
+    },
+    {
+      "itemId": "ADDON_Chainsaw_HomemadeMuffler",
+      "quantity": 500
+    },
+    {
+      "itemId": "Addon_HillbillyChainsaw_IridescentBrick",
+      "quantity": 500
+    },
+    {
+      "itemId": "ADDON_Chainsaw_CarburatorGuide",
+      "quantity": 500
+    },
+    {
+      "itemId": "ADDON_Chainsaw_DoomEngravings",
+      "quantity": 500
+    },
+    {
       "itemId": "ArdentRavenWreath",
       "quantity": 500
     },
@@ -4878,6 +4878,18 @@
     },
     {
       "itemId": "K34P03",
+      "quantity": 3
+    },
+    {
+      "itemId": "S40P01",
+      "quantity": 3
+    },
+    {
+      "itemId": "S40P02",
+      "quantity": 3
+    },
+    {
+      "itemId": "S40P03",
       "quantity": 3
     }
   ],

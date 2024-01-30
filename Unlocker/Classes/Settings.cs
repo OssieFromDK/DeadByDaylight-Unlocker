@@ -1,4 +1,4 @@
-
+﻿
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace FortniteBurger.Classes
 	{
         internal static string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         internal static string ProfilePath = LocalAppData + "/FortniteBurger/Configs/Profiles";
-        private HttpClient WC = new();
+        private HttpClient WC = new HttpClient();
 
         internal Settings()
 		{
@@ -35,7 +35,7 @@ namespace FortniteBurger.Classes
             }
             catch 
             {
-                MessageBox.Show("Failed to download Market Files");
+                MainWindow.ErrorLog.CreateLog("Failed to download Market Files");
             }
         }
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
@@ -9,15 +9,16 @@ namespace FortniteBurger
     public partial class MainWindow : Window
     {
         internal static Classes.AutoUpdate AutoUpdater = new Classes.AutoUpdate();
-        internal static UpdateScreen UpdateScreen = new();
-        internal static Cookie cookie = new();
-        internal static Tome tome = new();
-        internal static BP bp = new();
-        internal static BPTools BPTools = new();
-        internal static Profile profile = new();
+        internal static UpdateScreen UpdateScreen = new UpdateScreen();
+        internal static Cookie cookie = new Cookie();
+        internal static Tome tome = new Tome();
+        internal static BP bp = new BP();
+        internal static BPTools BPTools = new BPTools();
+        internal static Profile profile = new Profile();
         internal static MainWindow main;
-        internal static Settings settingspage = new();
-        internal static Mods mods = new();
+        internal static Settings settingspage = new Settings();
+        internal static Mods mods = new Mods();
+        internal static Classes.ErrorLog ErrorLog = new Classes.ErrorLog();
         internal static Classes.Settings settings = new Classes.Settings();
         internal static Classes.PakBypass PakBypass = new Classes.PakBypass();
         //internal static Classes.LobbyInfo LobbyInfo = new Classes.LobbyInfo();
@@ -25,8 +26,8 @@ namespace FortniteBurger
         internal static Overlay currentOverlay;
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
-        internal static string DBDVersion = "7.4.2";
-        internal static string CurrVersion = "3.7.1.7";
+        internal static string DBDVersion = "7.5.0";
+        internal static string CurrVersion = "3.7.2.0";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
@@ -46,11 +47,15 @@ namespace FortniteBurger
             this.VersionText.Text = "Burger: v" + CurrVersion;
             this.DbdVersionText.Text = "DBD: v" + DBDVersion;
 
-            Classes.Worker.LoadWorker();
-            Classes.Telemetry.Load();
-            Classes.Telemetry.Add();
-            Classes.Settings.LoadConfig();
-            Classes.Settings.LoadMods();
+            try {
+                Classes.Worker.LoadWorker();
+                Classes.Telemetry.Load();
+                Classes.Telemetry.Add();
+                Classes.Settings.LoadConfig();
+                Classes.Settings.LoadMods();
+            } catch(Exception ex) {
+                ErrorLog.CreateLog(ex.Message);
+            }
         }
 
         private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
@@ -137,18 +142,6 @@ namespace FortniteBurger
                 Launch.Visibility = Visibility.Hidden;
                 Spinner.Visibility = Visibility.Visible;
 
-                if (CurrentType == "Steam")
-                {
-                    if (!PakBypass.PakBypassedThisSession)
-                    {
-                        UpdateText.Text = "Awaiting Pak Bypass...";
-                        await PakBypass.LoadPakBypass();
-
-                        UpdateText.Text = "Awaiting SSL Bypass...";
-                        await PakBypass.LoadSSLBypass();
-                    }
-                }
-
                 if (Classes.Mods.ModManager.HasInstalledNewMods) // Prevent Violation Error Crash
                 {
                     UpdateText.Text = "Awaiting Pak Bypass...";
@@ -166,14 +159,11 @@ namespace FortniteBurger
                 Classes.Utils.CheckForGameRunning(CurrentType);
             } catch(Exception ex)
             {
-                System.Windows.MessageBox.Show(ex.Message);
+                ErrorLog.CreateLog(ex.Message);
             }
         }
 
-        internal Timer Timer = new()
-{
-    Interval = 250
-};
+        internal Timer Timer = new Timer() { Interval = 250 };
 
         private void StartChecking()
         {
