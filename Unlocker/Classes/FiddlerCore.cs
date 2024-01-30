@@ -3,7 +3,6 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
-using System.Windows;
 
 namespace FortniteBurger.Classes
 {
@@ -31,25 +30,6 @@ namespace FortniteBurger.Classes
             x509Store.Close();
         }
 
-        private static void EnsureRootCertificate()
-        {
-            BCCertMaker.BCCertMaker bcCertMaker = new BCCertMaker.BCCertMaker();
-            CertMaker.oCertProvider = bcCertMaker;
-            string str = Path.Combine(Path.GetTempPath(), "defaultCertificate.p12");
-            string password = "$0M3$H1T";
-            if (!File.Exists(str))
-            {
-                CertMaker.removeFiddlerGeneratedCerts(true);
-                bcCertMaker.CreateRootCertificate();
-                bcCertMaker.WriteRootCertificateAndPrivateKeyToPkcs12File(str, password, null);
-            }
-            else
-                bcCertMaker.ReadRootCertificateAndPrivateKeyFromPkcs12File(str, password, null);
-            if (CertMaker.rootCertIsTrusted())
-                return;
-            CertMaker.trustRootCert();
-        }
-
         public static void StartFiddlerCore()
         {
             EnsureRootCertGrabber();
@@ -75,11 +55,6 @@ namespace FortniteBurger.Classes
         {
             FiddlerApplication.BeforeRequest -= LaunchedWithProfileEditor;
             FiddlerApplication.BeforeRequest += LaunchedWithProfileEditor;
-
-            //FiddlerApplication.BeforeResponse -= FiddlerApplication_BeforeRespone;
-            //FiddlerApplication.BeforeResponse += FiddlerApplication_BeforeRespone;
-            //FiddlerApplication.BeforeResponse -= LaunchLobbyInfo;
-            //FiddlerApplication.BeforeResponse += LaunchLobbyInfo;
         }
 
         public static void StopFiddlerCore()
@@ -88,8 +63,7 @@ namespace FortniteBurger.Classes
 
             FiddlerApplication.BeforeRequest -= LaunchedWithProfileEditor;
             FiddlerApplication.BeforeRequest -= GrabWithoutShutdown;
-            //FiddlerApplication.BeforeResponse -= LaunchLobbyInfo;
-            
+
             FiddlerApplication.Shutdown();
 
             FiddlerIsRunning = false;
@@ -140,8 +114,6 @@ namespace FortniteBurger.Classes
             }
         }
 
-        private static string ResponseData = "";
-
         private static void ProfileEditor(Session oSession)
         {
             if (oSession.uriContains("/api/v1/dbd-character-data/get-all") && MainWindow.profile.FullProfile && !MainWindow.profile.Off)
@@ -176,23 +148,11 @@ namespace FortniteBurger.Classes
             if ((oSession.uriContains("api/v1/extensions/playerLevels/getPlayerLevel")  || oSession.uriContains("api/v1/extensions/playerLevels/earnPlayerXp")) && MainWindow.profile.Level_Spoof)
                 oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Level.json";
 
-           if (oSession.uriContains("/catalog") && (MainWindow.profile.Break_Skins) && !MainWindow.profile.Off)
-                oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Catalog.json";
+           //if (oSession.uriContains("/catalog") && (MainWindow.profile.Break_Skins) && !MainWindow.profile.Off)
+                //oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Catalog.json";
 
-            if (oSession.uriContains("itemsKillswitch") && (MainWindow.profile.Disabled) && !MainWindow.profile.Off)
-                oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Disabled.json";
-
-            if (oSession.uriContains("/api/v1/dbd-player-card/set")) // Kommer før
-            {
-
-                oSession.utilCreateResponseAndBypassServer();
-
-                oSession.utilDecodeRequest();
-
-                ResponseData = oSession.GetRequestBodyAsString();
-
-                oSession.utilSetResponseBody(ResponseData);
-            }
+            //if (oSession.uriContains("itemsKillswitch") && (MainWindow.profile.Disabled) && !MainWindow.profile.Off)
+                //oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Disabled.json";
         }
 
         private static void CookieGrabWithoutShutdown(Session oSession)
