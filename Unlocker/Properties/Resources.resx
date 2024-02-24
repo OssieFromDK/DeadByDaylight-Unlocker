@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Core" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pakchunk4100-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="CornRemover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pakchunk4102-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -130,17 +127,11 @@
   <data name="Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KillerDetector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pakchunk870-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="OldAnim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pakchunk999-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RedStain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pakchunk872-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SSLBypass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pakchunk4174-WindowsNoEditor.pak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="StretchedRes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pakchunk889-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -151,13 +142,22 @@
   <data name="BurgerWorker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BurgerWorker.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Core" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pakchunk4100-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="KillerDetector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pakchunk870-WindowsNoEditor.bak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PakBypass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PakBypass.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Signature" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signature.sig;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Signature_KEK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signature_KEK.kek;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PakBypass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PakBypass.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="SSLBypass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SSLBypass.pak;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
