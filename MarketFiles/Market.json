@@ -34044,6 +34044,56 @@
       },
       {
         "lastUpdatedAt": 1710259975,
+        "objectId": "Cannibal",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1710259975,
+        "objectId": "CA_W007",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1710259975,
+        "objectId": "CA_W006",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1710259975,
+        "objectId": "CA_Body007",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1710259975,
+        "objectId": "CA_Head007",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1710259975,
+        "objectId": "CA_Head006",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1710259975,
+        "objectId": "CA_Body006",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1708809758,
+        "objectId": "BBQAndChilli",
+        "quantity": 3
+      },
+      {
+        "lastUpdatedAt": 1708809758,
+        "objectId": "InTheDark",
+        "quantity": 3
+      },
+      {
+        "lastUpdatedAt": 1708809758,
+        "objectId": "FranklinsLoss",
+        "quantity": 3
+      },
+      {
+        "lastUpdatedAt": 1710259975,
         "objectId": "S25",
         "quantity": 1
       },
@@ -34547,6 +34597,26 @@
         "objectId": "ADDON_Bell_AllseeingSpirit",
         "quantity": 500
       },
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_ChainsawFile","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_SparkPlug","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_VegetableOil","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_PrimerBulb","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_LongGuideBar","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_DepthGaugeRake","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_HomemadeMuffler","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_GrislyChains","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_SpeedLimiter","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_ShopLubricant","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_KnifeScratches","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_Chili","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_BeastsMarks","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_CarburatorGuide","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_LightChassis","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_TheGrease","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_RustedChain","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_AwardWinningChili","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_BegrimedChain","quantity":500},
+      {"lastUpdatedAt": 1710259975,"objectId":"ADDON_LFChainsaw_IridescentFlesh","quantity":500},
       {
         "lastUpdatedAt": 1710259975,
         "objectId": "ADDON_Bell_AllseeingWhite",

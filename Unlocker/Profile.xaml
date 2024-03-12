@@ -41,7 +41,7 @@
 
         <Grid x:Name="Full" Visibility="Visible">
             <TextBlock Text="Item Amount" FontSize="20" Margin="250,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
-            <TextBox x:Name="ItemAmountBox" Margin="250,175,0,0" PreviewTextInput="NumberValidationTextBox" Text="1000" TextWrapping="Wrap" FontSize="17"  FontFamily="Tw Cen MT Condensed Extra Bold" Foreground="White" Background="#151318" BorderBrush="Black" BorderThickness="0.5" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <TextBox x:Name="ItemAmountBox" Margin="250,175,0,0" PreviewTextInput="NumberValidationTextBox" Text="100" TextWrapping="Wrap" FontSize="17"  FontFamily="Tw Cen MT Condensed Extra Bold" Foreground="White" Background="#151318" BorderBrush="Black" BorderThickness="0.5" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 
             <TextBlock Text="Prestige Level" FontSize="20" Margin="0,100,250,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
             <TextBox x:Name="PrestigeLevelBox" Margin="0,175,250,0" PreviewTextInput="NumberValidationTextBox" Text="100" TextWrapping="Wrap" FontSize="17"  FontFamily="Tw Cen MT Condensed Extra Bold" Foreground="White" Background="#151318" BorderBrush="Black" BorderThickness="0.5" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
