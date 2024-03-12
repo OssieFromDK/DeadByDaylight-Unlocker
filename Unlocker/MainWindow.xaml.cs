@@ -26,8 +26,8 @@ namespace FortniteBurger
         internal static Overlay currentOverlay;
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
-        internal static string DBDVersion = "7.5.2";
-        internal static string CurrVersion = "3.7.2.3";
+        internal static string DBDVersion = "7.6.0";
+        internal static string CurrVersion = "3.7.2.4";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
