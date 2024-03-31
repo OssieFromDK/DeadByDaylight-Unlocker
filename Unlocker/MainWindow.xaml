@@ -85,7 +85,7 @@
                 Width="75"
                 Click="HomePage_Click"/>
 
-        <Button Content="{StaticResource cookie}" Margin="12,145,0,0" VerticalAlignment="Top" Height="75"
+        <Button Content="{StaticResource website}" Margin="12,145,0,0" VerticalAlignment="Top" Height="75"
                 Background="#292d33"
                 Foreground="White"
                 FontFamily="Arial"
@@ -93,9 +93,9 @@
                 Style="{DynamicResource RoundendButtonStyle1}" 
                 HorizontalAlignment="Left" 
                 Width="75"
-                Click="Cookie_Click"/>
+                Click="GoWeb"/>
 
-        <Button Content="{StaticResource bp}" Margin="12,245,0,0"
+        <Button Content="{StaticResource discord}" Margin="12,245,0,0"
                 Background="#292d33"
                 Foreground="White"
                 FontFamily="Arial"
@@ -103,7 +103,7 @@
                 Style="{DynamicResource RoundendButtonStyle1}" 
                 HorizontalAlignment="Left" 
                 Width="75"
-                Click="BP_Click" Height="75" VerticalAlignment="Top"/>
+                Click="GoDiscord" Height="75" VerticalAlignment="Top"/>
 
         <Button Content="{StaticResource profile}" Margin="12,345,0,0"
                 Background="#292d33"

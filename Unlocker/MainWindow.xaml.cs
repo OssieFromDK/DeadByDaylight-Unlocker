@@ -26,13 +26,14 @@ namespace FortniteBurger
         internal static Overlay currentOverlay;
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
-        internal static string DBDVersion = "7.6.0";
-        internal static string CurrVersion = "3.7.3.0";
+        internal static string DBDVersion = "7.6.1";
+        internal static string CurrVersion = "3.7.3.2";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
         internal int ETA = 0;
         internal string Pos = "0";
+
 
         public MainWindow()
         {
@@ -55,6 +56,11 @@ namespace FortniteBurger
                 Classes.Settings.LoadMods();
             } catch(Exception ex) {
                 ErrorLog.CreateLog(ex.Message);
+            }
+
+            if(Classes.RegCheck.FirstLaunch())
+            {
+                System.Windows.MessageBox.Show("Welcome to Fortnite Burger, this message will only show once. \n\nPlease make sure to check the settings page for any changes you may want to change. \n\n!!! ------------------------------------- !!!\n\nIf you have paid for this tool you have been scammed.\nFortnite Burger is completely free and is not paid in any ways. \n\nTake Care \n/Ossie");
             }
         }
 
@@ -88,6 +94,16 @@ namespace FortniteBurger
         private void Cookie_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Content = cookie;
+        }
+
+        private void GoWeb(object sender, RoutedEventArgs e)
+        {
+            Classes.Launcher.LaunchWeb("https://fortniteburger.vip");
+        }
+
+        private void GoDiscord(object sender, RoutedEventArgs e)
+        {
+            Classes.Launcher.LaunchWeb("https://discord.gg/ySsrsYdGwx");
         }
 
         private void BP_Click(object sender, RoutedEventArgs e)
