@@ -83,16 +83,6 @@ namespace FortniteBurger.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Catalog {
-            get {
-                object obj = ResourceManager.GetObject("Catalog", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
         internal static byte[] Core {
             get {
                 object obj = ResourceManager.GetObject("Core", resourceCulture);
