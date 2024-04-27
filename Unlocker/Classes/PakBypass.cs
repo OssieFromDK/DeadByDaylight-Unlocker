@@ -64,7 +64,8 @@ namespace FortniteBurger.Classes
                 {
                     string FileName = Path.GetFileName(FileLocation);
                     string NewFileName = MainWindow.CurrentType == "EGS" ? FileName.Replace("WindowsNoEditor", "EGS") : FileName.Replace("EGS", "WindowsNoEditor");
-                    File.Copy(FileLocation, AppDir + "/Mods/" + NewFileName);
+                    if (!File.Exists(AppDir + "/Mods/" + NewFileName))
+                        File.Copy(FileLocation, AppDir + "/Mods/" + NewFileName);
                 }
             }
 

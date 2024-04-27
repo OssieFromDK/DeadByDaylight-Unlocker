@@ -17,14 +17,15 @@ namespace FortniteBurger
 
         private async void PakBypass_Start(object sender, RoutedEventArgs e)
         {
-            if (MainWindow.CurrentType == "MS") return;
+            System.Windows.MessageBox.Show("Outdated");
+            //if (MainWindow.CurrentType == "MS") return;
 
-            await MainWindow.PakBypass.LoadPakBypass();
+            //await MainWindow.PakBypass.LoadPakBypass();
 
-            if (MainWindow.CurrentType == "Steam")
-            {
-                await MainWindow.PakBypass.LoadSSLBypass();
-            }
+            //if (MainWindow.CurrentType == "Steam")
+            //{
+            //    await MainWindow.PakBypass.LoadSSLBypass();
+            //}
         }
 
         private void Sys_Clicked(object sender, RoutedEventArgs e)

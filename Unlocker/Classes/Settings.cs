@@ -33,24 +33,25 @@ namespace FortniteBurger.Classes
             {
                 DownloadSettings();
             }
-            catch 
+            catch(Exception e)
             {
                 MainWindow.ErrorLog.CreateLog("Failed to download Market Files");
+                MainWindow.ErrorLog.CreateLog(e.Message);
             }
         }
 
+        private static string BaseDir = "https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/";
+
         internal async Task DownloadSettings()
         {
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/GetAll.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Profile.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/Bloodweb.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Bloodweb.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/Market.json", LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsWithItems.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/MarketDlcOnly.json", LocalAppData + "/FortniteBurger/Configs/Profiles/DlcOnly.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/MarketWithPerks.json", LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsPerks.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/MarketNoSavefile.json", LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsONLY.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/Currency.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Currency.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/Level.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Level.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/Disabled.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Disabled.json");
-            await DownloadBytes("https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/Catalog.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Catalog.json");
+            await DownloadBytes(BaseDir + "GetAll.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Profile.json");
+            await DownloadBytes(BaseDir + "Bloodweb.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Bloodweb.json");
+            await DownloadBytes(BaseDir + "Market.json", LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsWithItems.json");
+            await DownloadBytes(BaseDir + "MarketDlcOnly.json", LocalAppData + "/FortniteBurger/Configs/Profiles/DlcOnly.json");
+            await DownloadBytes(BaseDir + "MarketWithPerks.json", LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsPerks.json");
+            await DownloadBytes(BaseDir + "MarketNoSavefile.json", LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsONLY.json");
+            await DownloadBytes(BaseDir + "Currency.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Currency.json");
+            await DownloadBytes(BaseDir + "Level.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Level.json");
         }
 
         internal async Task DownloadBytes(string uri, string output)

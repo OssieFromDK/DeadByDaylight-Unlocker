@@ -1,0 +1,392 @@
+{
+  "code": 200,
+  "message": "OK",
+  "data": {
+    "playerId": "MarketUpdater",
+    "updated": "04/19/2024",
+    "comment": "Market created by MarketUpdater",
+    "developer": "essence#0001",
+    "inventory": [
+      {
+        "lastUpdatedAt": 1710259975,
+        "objectId": "Cannibal",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Dwight",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Meg",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Claudette",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Chuckles",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Bob",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "HillBilly",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Witch",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Jake",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Nea",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Ace",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K35",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S41",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Ash",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S24",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K22",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S25",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K23",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Laurie",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Shape",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Killer07",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Feng",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Bear",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Smoke",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K24",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S26",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S27",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Nightmare",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Quentin",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Pig",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Eric",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K25",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Kate",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Clown",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Adam",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Spirit",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S28",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K26",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S29",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Jeff",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Legion",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K27",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S30",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Bill",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Jane",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Plague",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K28",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S31",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Ghostface",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K29",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S32",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S33",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Demogorgon",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Nancy",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Steve",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K30",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S34",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K31",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S35",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S36",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Yui",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Oni",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Nurse",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Zarina",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "Gunslinger",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K32",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S37",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S38",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S22",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K20",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K33",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S39",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S23",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K21",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "K34",
+        "quantity": 1
+      },
+      {
+        "lastUpdatedAt": 1713548695,
+        "objectId": "S40",
+        "quantity": 1
+      }
+    ]
+  }
+}

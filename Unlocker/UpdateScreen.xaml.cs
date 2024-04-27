@@ -34,6 +34,19 @@ namespace FortniteBurger
             MainWindow.main.UpdateCheckDone();
         }
 
+        internal async void FailUpdate()
+        {
+            UpdateText.Text = "Could not check for updates";
+            Spinner.Visibility = Visibility.Hidden;
+            Error.Visibility = Visibility.Visible;
+            await Task.Delay(1000);
+            this.Dispatcher.Invoke((Action)(() =>
+            {
+                MainWindow.main.TotalFrame.Content = null;
+            }));
+            MainWindow.main.UpdateCheckDone();
+        }
+
         internal void FoundUpdate(string Version)
         {
             UpdateText.Text = "Found Update: v" + Version;

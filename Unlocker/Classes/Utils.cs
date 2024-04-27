@@ -35,6 +35,32 @@ namespace FortniteBurger.Classes
         private static string BloodWebPath = Settings.ProfilePath + "/Bloodweb.json";
         private static string SkinsItemsPath = Settings.ProfilePath + "/SkinsWithItems.json";
 
+        internal static void DoFileCheck()
+        {
+            if(!File.Exists(FullProfilePath))
+                RewriteMarketFiles();
+
+            if (!File.Exists(BloodWebPath))
+                RewriteMarketFiles();
+
+            if (!File.Exists(SkinsItemsPath))
+                RewriteMarketFiles();
+        }
+
+        private static void RewriteMarketFiles()
+        {
+            File.WriteAllBytes(Settings.ProfilePath + "/Profile.json", Properties.Resources.Profile);
+            File.WriteAllBytes(Settings.ProfilePath + "/Bloodweb.json", Properties.Resources.Bloodweb);
+            File.WriteAllBytes(Settings.ProfilePath + "/SkinsWithItems.json", Properties.Resources.SkinsWithItems);
+            File.WriteAllBytes(Settings.ProfilePath + "/DlcOnly.json", Properties.Resources.DlcOnly);
+            File.WriteAllBytes(Settings.ProfilePath + "/SkinsPerks.json", Properties.Resources.SkinsPerks);
+            File.WriteAllBytes(Settings.ProfilePath + "/SkinsONLY.json", Properties.Resources.SkinsONLY);
+            File.WriteAllBytes(Settings.ProfilePath + "/Currency.json", Properties.Resources.Currency);
+            File.WriteAllBytes(Settings.ProfilePath + "/Level.json", Properties.Resources.Level);
+
+            MainWindow.ErrorLog.CreateLog("We were unable to fetch the latest market files, so the embedded ones were used instead.");
+        }
+
         internal static void UpdateProfiles(int Prestige, int itemAmount)
         {
             int realItemAmount = itemAmount / 2;

@@ -26,8 +26,8 @@ namespace FortniteBurger
         internal static Overlay currentOverlay;
         internal static Classes.Mods.ModManager ModManager = new Classes.Mods.ModManager();
 
-        internal static string DBDVersion = "7.6.2";
-        internal static string CurrVersion = "3.7.3.3";
+        internal static string DBDVersion = "7.7.0";
+        internal static string CurrVersion = "3.7.4.0";
         internal static string CurrentType = "Steam";
 
         internal bool InQueue = false;
@@ -39,8 +39,26 @@ namespace FortniteBurger
         {
             InitializeComponent();
             main = this;
-            Classes.Settings.LoadSettings();
-            UpdateScreen.CheckForUpdate();
+
+            try
+            {
+                Classes.Settings.LoadSettings();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.CreateLog("We were unable to load your settings");
+                ErrorLog.CreateLog(ex.Message);
+            }
+
+            try
+            {
+                UpdateScreen.CheckForUpdate();
+            } catch(Exception ex)
+            {
+                ErrorLog.CreateLog("We were unable to check for updates for the software");
+                ErrorLog.CreateLog(ex.Message);
+                UpdateCheckDone();
+            }
         }
 
         internal void UpdateCheckDone()
@@ -137,6 +155,8 @@ namespace FortniteBurger
         {
             try
             {
+                Classes.Utils.DoFileCheck();
+
                 if (Classes.Utils.IsPakBypassRunning())
                 {
                     UpdateText.Text = "Finish Pak Bypass before launching";

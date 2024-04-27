@@ -63,9 +63,29 @@ namespace FortniteBurger.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Bloodweb {
+            get {
+                object obj = ResourceManager.GetObject("Bloodweb", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] BurgerWorker {
             get {
                 object obj = ResourceManager.GetObject("BurgerWorker", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Catalog {
+            get {
+                object obj = ResourceManager.GetObject("Catalog", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -86,6 +106,36 @@ namespace FortniteBurger.Properties {
         internal static byte[] CornRemover {
             get {
                 object obj = ResourceManager.GetObject("CornRemover", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Currency {
+            get {
+                object obj = ResourceManager.GetObject("Currency", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disabled {
+            get {
+                object obj = ResourceManager.GetObject("Disabled", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DlcOnly {
+            get {
+                object obj = ResourceManager.GetObject("DlcOnly", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -123,6 +173,16 @@ namespace FortniteBurger.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Level {
+            get {
+                object obj = ResourceManager.GetObject("Level", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Offerings {
             get {
                 object obj = ResourceManager.GetObject("Offerings", resourceCulture);
@@ -153,6 +213,16 @@ namespace FortniteBurger.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Profile {
+            get {
+                object obj = ResourceManager.GetObject("Profile", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] RedStain {
             get {
                 object obj = ResourceManager.GetObject("RedStain", resourceCulture);
@@ -176,6 +246,36 @@ namespace FortniteBurger.Properties {
         internal static byte[] Signature_KEK {
             get {
                 object obj = ResourceManager.GetObject("Signature_KEK", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SkinsONLY {
+            get {
+                object obj = ResourceManager.GetObject("SkinsONLY", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SkinsPerks {
+            get {
+                object obj = ResourceManager.GetObject("SkinsPerks", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SkinsWithItems {
+            get {
+                object obj = ResourceManager.GetObject("SkinsWithItems", resourceCulture);
                 return ((byte[])(obj));
             }
         }

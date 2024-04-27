@@ -160,4 +160,34 @@
   <data name="PakBypass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PakBypass.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Bloodweb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bloodweb.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Catalog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Catalog.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Currency" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Currency.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Disabled.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DlcOnly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DlcOnly.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Level" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Level.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Profile.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SkinsONLY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SkinsONLY.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SkinsPerks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SkinsPerks.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SkinsWithItems" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SkinsWithItems.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
