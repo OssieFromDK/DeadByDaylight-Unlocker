@@ -68,32 +68,32 @@
       {
         "NodeData": [
           {
-            "ContentId": "Addon_Key_003",
+            "ContentId": "Item_Camper_BrokenKey",
             "NodeId": 101,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_Medkit_Anniversary2022",
+            "ContentId": "Addon_Map_008",
             "NodeId": 102,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Firecracker_GunPowder",
+            "ContentId": "Item_Camper_K33MagicItem_VecnaHand",
             "NodeId": 103,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_WeddingRing",
+            "ContentId": "ADDON_toolbox_springclamp",
             "NodeId": 104,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_toolbox_springclamp",
+            "ContentId": "ADDON_flashlight_oddbulb",
             "NodeId": 105,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_MedKit03",
+            "ContentId": "FreshPrimroseBlossom",
             "NodeId": 106,
             "State": "Collected"
           }
@@ -102,62 +102,62 @@
       {
         "NodeData": [
           {
-            "ContentId": "ADDON_medkit_gauzeroll",
+            "ContentId": "SealedEnvelope",
             "NodeId": 201,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_flashlight_highendsapphire",
+            "ContentId": "Addon_Map_002",
             "NodeId": 202,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_flashlight_oddbulb",
+            "ContentId": "EscapeCake",
             "NodeId": 203,
             "State": "Collected"
           },
           {
-            "ContentId": "BogLaurelSachet",
+            "ContentId": "Addon_Map_001",
             "NodeId": 204,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Firecracker_GunPowder",
+            "ContentId": "ADDON_toolbox_socketswivels",
             "NodeId": 205,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Medkit_003",
+            "ContentId": "Item_Camper_Medkit05",
             "NodeId": 206,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_002",
+            "ContentId": "Item_FragileObject",
             "NodeId": 207,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_RainbowMap",
+            "ContentId": "Addon_Map_007",
             "NodeId": 208,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_003",
+            "ContentId": "EscapeCake",
             "NodeId": 209,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_K33MagicItem_VecnaHand",
+            "ContentId": "IvoryChalkPouch",
             "NodeId": 210,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_Medkit_Anniversary2022",
+            "ContentId": "ADDON_medkit_surgicalsuture",
             "NodeId": 211,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_medkit_selfadherentwrap",
+            "ContentId": "Item_Camper_MechanicsToolbox",
             "NodeId": 212,
             "State": "Collected"
           }
@@ -166,92 +166,92 @@
       {
         "NodeData": [
           {
-            "ContentId": "Addon_Flashlight_006",
+            "ContentId": "Item_Camper_Map_Spring2024",
             "NodeId": 301,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_flashlight_intensehalogen",
+            "ContentId": "Addon_Toolbox_007",
             "NodeId": 302,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_RainbowMap",
+            "ContentId": "FreshBogLaurel",
             "NodeId": 303,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Firecracker_LongFuse",
+            "ContentId": "Item_Camper_K33MagicItem_Bracers",
             "NodeId": 304,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Medkit_007",
+            "ContentId": "Addon_Key_006",
             "NodeId": 305,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Medkit_003",
+            "ContentId": "ADDON_flashlight_oddbulb",
             "NodeId": 306,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_Medkit_Anniversary2020",
+            "ContentId": "CreamChalkPouch",
             "NodeId": 307,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_005",
+            "ContentId": "Addon_Key_001",
             "NodeId": 308,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_AlexsToolbox",
+            "ContentId": "Addon_Key_006",
             "NodeId": 309,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_Firecracker_Chinese",
+            "ContentId": "Addon_Key_005",
             "NodeId": 310,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Medkit_005",
+            "ContentId": "FreshCrispleafAmaranth",
             "NodeId": 311,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_Firecracker_Chinese",
+            "ContentId": "TarnishedCoin",
             "NodeId": 312,
             "State": "Collected"
           },
           {
-            "ContentId": "VigosJarOfSaltyLips",
+            "ContentId": "Item_Camper_AnniversaryToolbox",
             "NodeId": 313,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Medkit_001",
+            "ContentId": "SaltPouch",
             "NodeId": 314,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_K33MagicItem_VecnaEye",
+            "ContentId": "Addon_Key_002",
             "NodeId": 315,
             "State": "Collected"
           },
           {
-            "ContentId": "ShinyCoin",
+            "ContentId": "Item_Camper_Flashlight02",
             "NodeId": 316,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_Flashlight02",
+            "ContentId": "Addon_Key_003",
             "NodeId": 317,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Toolbox_006",
+            "ContentId": "Addon_Key_004",
             "NodeId": 318,
             "State": "Collected"
           }
@@ -260,7 +260,7 @@
       {
         "NodeData": [
           {
-            "ContentId": "Addon_Flashlight_002",
+            "ContentId": "Item_Camper_RainbowMap",
             "NodeId": 401,
             "State": "Collected"
           }
@@ -269,22 +269,6 @@
     ]
   },
   "CharacterItems": [
-    {
-      "ItemId": "Item_Camper_K33MagicItem_Bracers",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Item_Camper_K33MagicItem_Boots",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Item_Camper_K33MagicItem_VecnaEye",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Item_Camper_K33MagicItem_VecnaHand",
-      "Quantity": 100
-    },
     {
       "ItemId": "Item_Camper_AlexsToolbox",
       "Quantity": 100
@@ -398,22 +382,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "Item_Camper_K33Turret",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Father_Key_Card",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Item_Camper_ContaminationSerum",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Item_Camper_Firecracker_Flashbang",
-      "Quantity": 100
-    },
-    {
       "ItemId": "Item_Camper_Flashlight04",
       "Quantity": 100
     },
@@ -422,23 +390,7 @@
       "Quantity": 100
     },
     {
-      "ItemId": "Item_FragileObject",
-      "Quantity": 100
-    },
-    {
       "ItemId": "Item_Camper_AnniversaryToolbox",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "FakeItem_Camper_OnryoTape",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Item_Camper_K32Emp",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Item_Camper_K29InfectionRemover",
       "Quantity": 100
     },
     {
@@ -815,38 +767,6 @@
     },
     {
       "ItemId": "Addon_Bell_012",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_Firecracker_BlackPowder",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_Firecracker_BuckShot",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_Firecracker_FlashPowder",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_Firecracker_GunPowder",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_Firecracker_LargePack",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_Firecracker_LongFuse",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_Firecracker_MagnesiumPowder",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_Firecracker_MediumFuse",
       "Quantity": 100
     },
     {
@@ -1494,19 +1414,7 @@
       "Quantity": 100
     },
     {
-      "ItemId": "Addon_GasBomb_19a",
-      "Quantity": 100
-    },
-    {
       "ItemId": "Addon_GasBomb_20",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_GasBomb_20a",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "Addon_GasBomb_20b",
       "Quantity": 100
     },
     {
@@ -3602,10 +3510,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "BoneSplinter",
-      "Quantity": 100
-    },
-    {
       "ItemId": "ArdentRavenWreath",
       "Quantity": 100
     },
@@ -3642,10 +3546,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "CattleTag28",
-      "Quantity": 100
-    },
-    {
       "ItemId": "ChalkPouch",
       "Quantity": 100
     },
@@ -3658,15 +3558,7 @@
       "Quantity": 100
     },
     {
-      "ItemId": "ColdwindCattleTag81",
-      "Quantity": 100
-    },
-    {
       "ItemId": "CreamChalkPouch",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "CrescentMoonBouquet",
       "Quantity": 100
     },
     {
@@ -3738,10 +3630,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "FullMoonBouquet",
-      "Quantity": 100
-    },
-    {
       "ItemId": "HazyReagent",
       "Quantity": 100
     },
@@ -3762,14 +3650,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "LunacyTicket",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "MacmillanLedgerPage",
-      "Quantity": 100
-    },
-    {
       "ItemId": "MacMillanPhalanxBone",
       "Quantity": 100
     },
@@ -3782,14 +3662,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "NewMoonBouquet",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "PElliotLunacyTicket",
-      "Quantity": 100
-    },
-    {
       "ItemId": "PetrifiedOak",
       "Quantity": 100
     },
@@ -3799,10 +3671,6 @@
     },
     {
       "ItemId": "PutridOak",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "QuarterMoonBouquet",
       "Quantity": 100
     },
     {
@@ -3830,10 +3698,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "ShreddedPlate",
-      "Quantity": 100
-    },
-    {
       "ItemId": "ShrikeWreath",
       "Quantity": 100
     },
@@ -3847,10 +3711,6 @@
     },
     {
       "ItemId": "ShroudofUnion",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "SignedLedgerPage",
       "Quantity": 100
     },
     {
@@ -3874,27 +3734,11 @@
       "Quantity": 100
     },
     {
-      "ItemId": "VirginiaPlate",
-      "Quantity": 100
-    },
-    {
       "ItemId": "WhiteWard",
       "Quantity": 100
     },
     {
       "ItemId": "VigosJarOfSaltyLips",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "MuddySplinter",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "FumingCordage",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "FumingWelcomeSign",
       "Quantity": 100
     },
     {
@@ -3954,10 +3798,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "SmokingSplinter",
-      "Quantity": 100
-    },
-    {
       "ItemId": "ThePiedPiper",
       "Quantity": 100
     },
@@ -3966,19 +3806,7 @@
       "Quantity": 100
     },
     {
-      "ItemId": "BlackSplinter",
-      "Quantity": 100
-    },
-    {
       "ItemId": "StrodeRealtyKey",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "DecrepitClapboard",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "HarvestFestivalLeaflet",
       "Quantity": 100
     },
     {
@@ -3994,18 +3822,6 @@
       "Quantity": 100
     },
     {
-      "ItemId": "ShockSplinter",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "EmergencyCertificate",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "PsychiatricAssessmentReport",
-      "Quantity": 100
-    },
-    {
       "ItemId": "ShatteredGlasses",
       "Quantity": 100
     },
@@ -4014,23 +3830,11 @@
       "Quantity": 100
     },
     {
-      "ItemId": "GlassSplinter",
-      "Quantity": 100
-    },
-    {
       "ItemId": "Jigsawpiece",
       "Quantity": 100
     },
     {
       "ItemId": "Anniversary2021Offering",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "PaintedRiverRock",
-      "Quantity": 100
-    },
-    {
-      "ItemId": "ChildrensBook",
       "Quantity": 100
     },
     {
