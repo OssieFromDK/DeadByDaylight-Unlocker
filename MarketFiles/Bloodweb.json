@@ -68,32 +68,32 @@
       {
         "NodeData": [
           {
-            "ContentId": "Item_Camper_BrokenKey",
+            "ContentId": "Item_Camper_Firecracker_Anniversary2019",
             "NodeId": 101,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Map_008",
+            "ContentId": "Addon_Toolbox_006",
             "NodeId": 102,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_K33MagicItem_VecnaHand",
+            "ContentId": "ChalkPouch",
             "NodeId": 103,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_toolbox_springclamp",
+            "ContentId": "Item_Camper_K32Emp",
             "NodeId": 104,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_flashlight_oddbulb",
+            "ContentId": "Item_Camper_WornoutToolbox",
             "NodeId": 105,
             "State": "Collected"
           },
           {
-            "ContentId": "FreshPrimroseBlossom",
+            "ContentId": "Item_Camper_Flashlight_Anniversary2022",
             "NodeId": 106,
             "State": "Collected"
           }
@@ -102,62 +102,62 @@
       {
         "NodeData": [
           {
-            "ContentId": "SealedEnvelope",
+            "ContentId": "Addon_Medkit_001",
             "NodeId": 201,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Map_002",
+            "ContentId": "VigosJarOfSaltyLips",
             "NodeId": 202,
             "State": "Collected"
           },
           {
-            "ContentId": "EscapeCake",
+            "ContentId": "SweetWilliamSachet",
             "NodeId": 203,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Map_001",
+            "ContentId": "Addon_Flashlight_006",
             "NodeId": 204,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_toolbox_socketswivels",
+            "ContentId": "Addon_Map_005",
             "NodeId": 205,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_Medkit05",
+            "ContentId": "Item_Camper_RainbowMap",
             "NodeId": 206,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_FragileObject",
+            "ContentId": "Item_Camper_AlexsToolbox",
             "NodeId": 207,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Map_007",
+            "ContentId": "ADDON_toolbox_springclamp",
             "NodeId": 208,
             "State": "Collected"
           },
           {
-            "ContentId": "EscapeCake",
+            "ContentId": "ShroudofBinding",
             "NodeId": 209,
             "State": "Collected"
           },
           {
-            "ContentId": "IvoryChalkPouch",
+            "ContentId": "ShroudofBinding",
             "NodeId": 210,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_medkit_surgicalsuture",
+            "ContentId": "PetrifiedOak",
             "NodeId": 211,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_MechanicsToolbox",
+            "ContentId": "Addon_Toolbox_003",
             "NodeId": 212,
             "State": "Collected"
           }
@@ -166,92 +166,92 @@
       {
         "NodeData": [
           {
-            "ContentId": "Item_Camper_Map_Spring2024",
+            "ContentId": "Addon_Map_005",
             "NodeId": 301,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Toolbox_007",
+            "ContentId": "Item_Camper_LunarToolbox",
             "NodeId": 302,
             "State": "Collected"
           },
           {
-            "ContentId": "FreshBogLaurel",
+            "ContentId": "Addon_Flashlight_BrokenBulb",
             "NodeId": 303,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_K33MagicItem_Bracers",
+            "ContentId": "Addon_Key_007",
             "NodeId": 304,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_006",
+            "ContentId": "FreshBogLaurel",
             "NodeId": 305,
             "State": "Collected"
           },
           {
-            "ContentId": "ADDON_flashlight_oddbulb",
+            "ContentId": "Addon_Flashlight_003",
             "NodeId": 306,
             "State": "Collected"
           },
           {
-            "ContentId": "CreamChalkPouch",
+            "ContentId": "ADDON_flashlight_rubbergrip",
             "NodeId": 307,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_001",
+            "ContentId": "FragrantSweetWilliam",
             "NodeId": 308,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_006",
+            "ContentId": "Addon_Map_009",
             "NodeId": 309,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_005",
+            "ContentId": "Addon_Medkit_005",
             "NodeId": 310,
             "State": "Collected"
           },
           {
-            "ContentId": "FreshCrispleafAmaranth",
+            "ContentId": "Item_Camper_EngineerToolbox",
             "NodeId": 311,
             "State": "Collected"
           },
           {
-            "ContentId": "TarnishedCoin",
+            "ContentId": "Addon_Key_008",
             "NodeId": 312,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_AnniversaryToolbox",
+            "ContentId": "Addon_Medkit_008",
             "NodeId": 313,
             "State": "Collected"
           },
           {
-            "ContentId": "SaltPouch",
+            "ContentId": "Addon_Toolbox_002",
             "NodeId": 314,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_002",
+            "ContentId": "ADDON_medkit_surgicalsuture",
             "NodeId": 315,
             "State": "Collected"
           },
           {
-            "ContentId": "Item_Camper_Flashlight02",
+            "ContentId": "Item_Camper_K33MagicItem_VecnaHand",
             "NodeId": 316,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_003",
+            "ContentId": "Item_Camper_K33MagicItem_Boots",
             "NodeId": 317,
             "State": "Collected"
           },
           {
-            "ContentId": "Addon_Key_004",
+            "ContentId": "Item_Camper_K33MagicItem_VecnaHand",
             "NodeId": 318,
             "State": "Collected"
           }
@@ -260,7 +260,7 @@
       {
         "NodeData": [
           {
-            "ContentId": "Item_Camper_RainbowMap",
+            "ContentId": "SaltPouch",
             "NodeId": 401,
             "State": "Collected"
           }
