@@ -73,33 +73,33 @@ namespace FortniteBurger.Classes
             string SkinsItems_Text = File.ReadAllText(SkinsItemsPath);
             JObject SkinsItems_JSON = JsonConvert.DeserializeObject<JObject>(SkinsItems_Text);
 
-            for (int i = 0; i < Profile_JSON["List"].Count(); i++)
+            for (int i = 0; i < Profile_JSON["list"].Count(); i++)
             {
-                Profile_JSON["List"][i]["PrestigeLevel"] = Prestige;
+                Profile_JSON["list"][i]["prestigeLevel"] = Prestige;
 
-                for (int q = 0; q < Profile_JSON["List"][i]["CharacterItems"].Count(); q++)
+                for (int q = 0; q < Profile_JSON["list"][i]["characterItems"].Count(); q++)
                 {
-                    if ((int)Profile_JSON["List"][i]["CharacterItems"][q]["Quantity"] > 3)
+                    if ((int)Profile_JSON["list"][i]["characterItems"][q]["quantity"] > 3)
                     {
-                        Profile_JSON["List"][i]["CharacterItems"][q]["Quantity"] = realItemAmount;
+                        Profile_JSON["list"][i]["characterItems"][q]["quantity"] = realItemAmount;
                     }
                 }
             }
 
-            Bloodweb_JSON["PrestigeLevel"] = Prestige;
-            for (int i = 0; i < Bloodweb_JSON["CharacterItems"].Count(); i++)
+            Bloodweb_JSON["prestigeLevel"] = Prestige;
+            for (int i = 0; i < Bloodweb_JSON["characterItems"].Count(); i++)
             {
-                if ((int)Bloodweb_JSON["CharacterItems"][i]["Quantity"] > 3)
+                if ((int)Bloodweb_JSON["characterItems"][i]["quantity"] > 3)
                 {
-                    Bloodweb_JSON["CharacterItems"][i]["Quantity"] = realItemAmount;
+                    Bloodweb_JSON["characterItems"][i]["quantity"] = realItemAmount;
                 }
             }
 
-            for (int i = 0; i < SkinsItems_JSON["Data"]["Inventory"].Count(); i++)
+            for (int i = 0; i < SkinsItems_JSON["data"]["inventory"].Count(); i++)
             {
-                if ((int)SkinsItems_JSON["Data"]["Inventory"][i]["Quantity"] > 3)
+                if ((int)SkinsItems_JSON["data"]["inventory"][i]["quantity"] > 3)
                 {
-                    SkinsItems_JSON["Data"]["Inventory"][i]["Quantity"] = realItemAmount;
+                    SkinsItems_JSON["data"]["inventory"][i]["quantity"] = realItemAmount;
                 }
             }
 
