@@ -68,32 +68,32 @@
       {
         "nodeData": [
           {
-            "contentId": "PetrifiedOak",
+            "contentId": "Item_Camper_Flashlight",
             "nodeId": 101,
             "state": "Collected"
           },
           {
-            "contentId": "ADDON_toolbox_springclamp",
+            "contentId": "Addon_Map_008",
             "nodeId": 102,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Map_007",
+            "contentId": "ChalkPouch",
             "nodeId": 103,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Medkit_001",
+            "contentId": "SaltPouch",
             "nodeId": 104,
             "state": "Collected"
           },
           {
-            "contentId": "ADDON_medkit_gauzeroll",
+            "contentId": "ADDON_toolbox_springclamp",
             "nodeId": 105,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Map_006",
+            "contentId": "Item_Camper_LunarToolbox",
             "nodeId": 106,
             "state": "Collected"
           }
@@ -102,62 +102,62 @@
       {
         "nodeData": [
           {
-            "contentId": "Item_Camper_DullKey",
+            "contentId": "Addon_Flashlight_003",
             "nodeId": 201,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Flashlight_BrokenBulb",
+            "contentId": "Item_Camper_Flashlight03",
             "nodeId": 202,
             "state": "Collected"
           },
           {
-            "contentId": "ADDON_flashlight_intensehalogen",
+            "contentId": "Addon_Map_008",
             "nodeId": 203,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Firecracker_GunPowder",
+            "contentId": "Addon_Flashlight_005",
             "nodeId": 204,
             "state": "Collected"
           },
           {
-            "contentId": "CrispleafAmaranthSachet",
+            "contentId": "Addon_Map_001",
             "nodeId": 205,
             "state": "Collected"
           },
           {
-            "contentId": "Item_Camper_Firecracker_Anniversary2019",
+            "contentId": "Addon_Key_WeddingRing",
             "nodeId": 206,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Map_007",
+            "contentId": "Addon_Key_002",
             "nodeId": 207,
             "state": "Collected"
           },
           {
-            "contentId": "ADDON_medkit_selfadherentwrap",
+            "contentId": "FragrantBogLaurel",
             "nodeId": 208,
             "state": "Collected"
           },
           {
-            "contentId": "BogLaurelSachet",
+            "contentId": "Addon_Medkit_004",
             "nodeId": 209,
             "state": "Collected"
           },
           {
-            "contentId": "CrispleafAmaranthSachet",
+            "contentId": "Item_Camper_MedKit",
             "nodeId": 210,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Toolbox_004",
+            "contentId": "Addon_Medkit_002",
             "nodeId": 211,
             "state": "Collected"
           },
           {
-            "contentId": "Item_Camper_MechanicsToolbox",
+            "contentId": "Item_Camper_K33MagicItem_VecnaHand",
             "nodeId": 212,
             "state": "Collected"
           }
@@ -166,92 +166,92 @@
       {
         "nodeData": [
           {
-            "contentId": "Item_Camper_BrokenKey",
+            "contentId": "Addon_Key_008",
             "nodeId": 301,
             "state": "Collected"
           },
           {
-            "contentId": "FreshSweetWilliam",
+            "contentId": "Addon_Firecracker_MagnesiumPowder",
             "nodeId": 302,
             "state": "Collected"
           },
           {
-            "contentId": "Item_Camper_K32Emp",
+            "contentId": "Item_Camper_CommodiousToolbox",
             "nodeId": 303,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Flashlight_006",
+            "contentId": "PetrifiedOak",
             "nodeId": 304,
             "state": "Collected"
           },
           {
-            "contentId": "Item_Camper_K33MagicItem_Bracers",
+            "contentId": "Item_Camper_Flashlight04",
             "nodeId": 305,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Toolbox_006",
+            "contentId": "Addon_Key_003",
             "nodeId": 306,
             "state": "Collected"
           },
           {
-            "contentId": "ADDON_medkit_gauzeroll",
+            "contentId": "Item_Camper_WornoutToolbox",
             "nodeId": 307,
             "state": "Collected"
           },
           {
-            "contentId": "ADDON_flashlight_lonflifebattery",
+            "contentId": "Addon_Map_008",
             "nodeId": 308,
             "state": "Collected"
           },
           {
-            "contentId": "Item_Camper_Map_Spring2024",
+            "contentId": "FreshCrispleafAmaranth",
             "nodeId": 309,
             "state": "Collected"
           },
           {
-            "contentId": "Item_Camper_MechanicsToolbox",
+            "contentId": "Addon_Key_003",
             "nodeId": 310,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Flashlight_004",
+            "contentId": "Item_Camper_CommodiousToolbox",
             "nodeId": 311,
             "state": "Collected"
           },
           {
-            "contentId": "Item_Camper_Firecracker_Flashbang",
+            "contentId": "Item_Camper_AnniversaryToolbox",
             "nodeId": 312,
             "state": "Collected"
           },
           {
-            "contentId": "Item_Camper_AnniversaryToolbox",
+            "contentId": "Item_Camper_LunarToolbox",
             "nodeId": 313,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Medkit_003",
+            "contentId": "PetrifiedOak",
             "nodeId": 314,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Key_006",
+            "contentId": "Item_Camper_K33MagicItem_VecnaHand",
             "nodeId": 315,
             "state": "Collected"
           },
           {
-            "contentId": "ADDON_medkit_gauzeroll",
+            "contentId": "TarnishedCoin",
             "nodeId": 316,
             "state": "Collected"
           },
           {
-            "contentId": "FragrantBogLaurel",
+            "contentId": "Item_Camper_Map_Spring2024",
             "nodeId": 317,
             "state": "Collected"
           },
           {
-            "contentId": "Addon_Map_003",
+            "contentId": "Item_Camper_K32Emp",
             "nodeId": 318,
             "state": "Collected"
           }
@@ -260,7 +260,7 @@
       {
         "nodeData": [
           {
-            "contentId": "Addon_Medkit_007",
+            "contentId": "Item_Camper_Firecracker_Chinese",
             "nodeId": 401,
             "state": "Collected"
           }
