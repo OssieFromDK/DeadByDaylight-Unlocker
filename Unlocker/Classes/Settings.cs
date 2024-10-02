@@ -1,7 +1,9 @@
 ﻿
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -52,7 +54,71 @@ namespace FortniteBurger.Classes
             await DownloadBytes(BaseDir + "MarketNoSavefile.json", LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsONLY.json");
             await DownloadBytes(BaseDir + "Currency.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Currency.json");
             await DownloadBytes(BaseDir + "Level.json", LocalAppData + "/FortniteBurger/Configs/Profiles/Level.json");
+
+            UpdateInventory();
         }
+
+        private void UpdateInventory()
+        {
+            List<string> InventoryFiles = new List<string>()
+            {
+                LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsWithItems.json",
+                LocalAppData + "/FortniteBurger/Configs/Profiles/DlcOnly.json",
+                LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsPerks.json",
+                LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsONLY.json"
+            };
+
+            Random random = new Random();
+            string newPlyId = string.Empty;
+            for (int i = 0; i < 10; i++)
+            {
+                newPlyId += random.Next(0, 10).ToString();
+            }
+
+            foreach (string file in InventoryFiles)
+            {
+                string JSON = File.ReadAllText(file);
+                var SettingsObj = JsonConvert.DeserializeObject<Dictionary<string, object>>(JSON);
+
+                if (SettingsObj.ContainsKey("data"))
+                {
+                    JObject data = (JObject)SettingsObj["data"];
+
+                    if (data != null && data.ContainsKey("inventory"))
+                    {
+                        List<object> inventory = data["inventory"].ToObject<List<object>>();
+                        if (inventory != null)
+                        {
+                            // Shuffle the inventory list
+                            inventory = ShuffleList(inventory);
+                            data["inventory"] = JArray.FromObject(inventory);
+                        }
+                    }
+
+                    data["playerId"] = newPlyId;
+                }
+
+                string FinalJSON = JsonConvert.SerializeObject(SettingsObj);
+
+                File.WriteAllText(file, FinalJSON);
+            }
+        }
+
+        private List<T> ShuffleList<T>(List<T> list)
+        {
+            Random random = new Random();
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = random.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+            return list;
+        }
+
 
         internal async Task DownloadBytes(string uri, string output)
         {

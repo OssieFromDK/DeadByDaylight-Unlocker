@@ -13,7 +13,6 @@ namespace FortniteBurger.Classes
         internal static SessionStateHandler GrabWithShutdown = new SessionStateHandler(CookieGrabWithShutdown);
         internal static SessionStateHandler GrabWithoutShutdown = new SessionStateHandler(CookieGrabWithoutShutdown);
         internal static SessionStateHandler LaunchedWithProfileEditor = new SessionStateHandler(ProfileEditor);
-        internal static SessionStateHandler LaunchLobbyInfo = new SessionStateHandler(LobbyInfo);
 
         private static void EnsureRootCertGrabber()
         {
@@ -69,52 +68,6 @@ namespace FortniteBurger.Classes
 
             FiddlerIsRunning = false;
         }
-
-        private static void LobbyInfo(Session oSession)
-        {
-            if (oSession.uriContains("/api/v1/queue"))
-            {
-                if (!oSession.uriContains("/api/v1/queue/cance"))
-                {
-                    if (!oSession.uriContains("token/issue"))
-                    {
-                        oSession.bBufferResponse = true;
-                        oSession.utilDecodeResponse();
-                        string responseBodyAsString = oSession.GetResponseBodyAsString();
-
-                        if (!string.IsNullOrEmpty(responseBodyAsString))
-                        {
-                            JObject ResponeParsedObject = JObject.Parse(responseBodyAsString);
-                            JToken ResponeParsedToken_Status = ResponeParsedObject.SelectToken("status");
-                            if (ResponeParsedToken_Status.ToString().Equals("QUEUED"))
-                            {
-                                oSession.bBufferResponse = true;
-                                oSession.utilDecodeResponse();
-                                JToken ResponeParsedToken_QueueDataETA = ResponeParsedObject.SelectToken("queueData.ETA");
-                                JToken ResponeParsedToken_QueueDataPOS = ResponeParsedObject.SelectToken("queueData.position");
-
-                                MainWindow.main.Dispatcher.Invoke((Action)(() =>
-                                {
-                                    MainWindow.main.InQueue = true;
-                                    MainWindow.main.ETA = int.Parse(ResponeParsedToken_QueueDataETA.ToString());
-                                    MainWindow.main.Pos = ResponeParsedToken_QueueDataPOS.ToString();
-                                }));
-                            }
-
-                            if (ResponeParsedToken_Status.ToString().Equals("MATCHED"))
-                            {
-                                MainWindow.main.InQueue = false;
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    MainWindow.main.InQueue = false;
-                }
-            }
-        }
-
         private static void ProfileEditor(Session oSession)
         {
             if (oSession.uriContains("/api/v1/dbd-character-data/get-all") && MainWindow.profile.FullProfile && !MainWindow.profile.Off)
@@ -123,7 +76,7 @@ namespace FortniteBurger.Classes
             if (oSession.uriContains("/api/v1/dbd-character-data/bloodweb") && MainWindow.profile.FullProfile && !MainWindow.profile.Off)
                 oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Bloodweb.json";
 
-            if (oSession.uriContains("/api/v1/inventories") && !MainWindow.profile.Off)
+            if (oSession.uriContains("/api/v1/inventories") && !MainWindow.profile.Off && !oSession.uriContains("consume"))
             {
                 if (MainWindow.profile.FullProfile)
                 {

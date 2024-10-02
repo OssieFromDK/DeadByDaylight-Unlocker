@@ -17,14 +17,14 @@ namespace FortniteBurger.Classes
             string specificFolder = AppDir + "/error-log.txt";
             string Time = DateTime.Now.ToString(@"dd\/MM\/yyyy h\:mm tt");
 
-            using (var fs = File.Open(specificFolder, FileMode.OpenOrCreate, FileAccess.ReadWrite))
-            {
-                fs.SetLength(0);
-                using (var sw = new StreamWriter(fs))
-                {
-                    sw.Write(Time + ": " + ErrorMessage);
-                }
-            }
+            if (!File.Exists(specificFolder))
+                File.Create(specificFolder).Close();
+
+            string Content = File.ReadAllText(specificFolder);
+
+            Content += $"[{Time}] {ErrorMessage}\n";
+
+            File.WriteAllText(specificFolder, Content);
         }
     }
 }
