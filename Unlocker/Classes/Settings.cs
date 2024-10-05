@@ -58,9 +58,7 @@ namespace FortniteBurger.Classes
             UpdateInventory();
         }
 
-        private void UpdateInventory()
-        {
-            List<string> InventoryFiles = new List<string>()
+        List<string> InventoryFiles = new List<string>()
             {
                 LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsWithItems.json",
                 LocalAppData + "/FortniteBurger/Configs/Profiles/DlcOnly.json",
@@ -68,13 +66,8 @@ namespace FortniteBurger.Classes
                 LocalAppData + "/FortniteBurger/Configs/Profiles/SkinsONLY.json"
             };
 
-            Random random = new Random();
-            string newPlyId = string.Empty;
-            for (int i = 0; i < 10; i++)
-            {
-                newPlyId += random.Next(0, 10).ToString();
-            }
-
+        private void UpdateInventory()
+        {
             foreach (string file in InventoryFiles)
             {
                 string JSON = File.ReadAllText(file);
@@ -94,8 +87,26 @@ namespace FortniteBurger.Classes
                             data["inventory"] = JArray.FromObject(inventory);
                         }
                     }
+                }
 
-                    data["playerId"] = newPlyId;
+                string FinalJSON = JsonConvert.SerializeObject(SettingsObj);
+
+                File.WriteAllText(file, FinalJSON);
+            }
+        }
+
+        internal void UpdatePlayerId(string PlayerId)
+        {
+            foreach (string file in InventoryFiles)
+            {
+                string JSON = File.ReadAllText(file);
+                var SettingsObj = JsonConvert.DeserializeObject<Dictionary<string, object>>(JSON);
+
+                if (SettingsObj.ContainsKey("data"))
+                {
+                    JObject data = (JObject)SettingsObj["data"];
+                    
+                    data["playerId"] = PlayerId;
                 }
 
                 string FinalJSON = JsonConvert.SerializeObject(SettingsObj);

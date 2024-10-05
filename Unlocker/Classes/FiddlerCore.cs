@@ -1,4 +1,5 @@
 ﻿using Fiddler;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
@@ -13,6 +14,7 @@ namespace FortniteBurger.Classes
         internal static SessionStateHandler GrabWithShutdown = new SessionStateHandler(CookieGrabWithShutdown);
         internal static SessionStateHandler GrabWithoutShutdown = new SessionStateHandler(CookieGrabWithoutShutdown);
         internal static SessionStateHandler LaunchedWithProfileEditor = new SessionStateHandler(ProfileEditor);
+        internal static string MyPlayerId = string.Empty;
 
         private static void EnsureRootCertGrabber()
         {
@@ -55,6 +57,7 @@ namespace FortniteBurger.Classes
         {
             FiddlerApplication.BeforeRequest -= LaunchedWithProfileEditor;
             FiddlerApplication.BeforeRequest += LaunchedWithProfileEditor;
+            FiddlerApplication.BeforeResponse += FiddlerApplication_BeforeRespone;
         }
 
         public static void StopFiddlerCore()
@@ -63,11 +66,13 @@ namespace FortniteBurger.Classes
 
             FiddlerApplication.BeforeRequest -= LaunchedWithProfileEditor;
             FiddlerApplication.BeforeRequest -= GrabWithoutShutdown;
+            FiddlerApplication.BeforeResponse -= FiddlerApplication_BeforeRespone;
 
             FiddlerApplication.Shutdown();
 
             FiddlerIsRunning = false;
         }
+
         private static void ProfileEditor(Session oSession)
         {
             if (oSession.uriContains("/api/v1/dbd-character-data/get-all") && MainWindow.profile.FullProfile && !MainWindow.profile.Off)
@@ -108,6 +113,20 @@ namespace FortniteBurger.Classes
             //if (oSession.uriContains("itemsKillswitch") && (MainWindow.profile.Disabled) && !MainWindow.profile.Off)
                 //oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Disabled.json";
         }
+
+        private static void FiddlerApplication_BeforeRespone(Session oSession)
+        {
+            if (oSession.uriContains("api/v1/auth/provider/"))
+            {
+                oSession.utilDecodeResponse();
+                string Response = oSession.GetResponseBodyAsString();
+                JObject JSON = JsonConvert.DeserializeObject<JObject>(Response);
+
+                MyPlayerId = JSON["userId"].ToString();
+                MainWindow.settings.UpdatePlayerId(MyPlayerId);
+            }
+        }
+
 
         private static void CookieGrabWithoutShutdown(Session oSession)
         {
