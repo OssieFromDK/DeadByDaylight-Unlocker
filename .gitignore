@@ -4,3 +4,6 @@ Unlocker/Resources/dbdPath.txt
 Unlocker/Resources/PakBypass.exe
 Unlocker/Properties/PublishProfiles/FolderProfile.pubxml.user
 Unlocker/FortniteBurger.csproj.user
+/Unlocker/.vs
+/Unlocker/bin
+/Unlocker/obj

@@ -73,7 +73,7 @@ namespace FortniteBurger.Classes
 
             string path = Path.Combine(Path.GetTempPath(), "PakBypass.exe");
 
-            File.WriteAllBytes(path, Properties.Resources.PakBypass);
+            //File.WriteAllBytes(path, Properties.Resources.PakBypass);
             Process PakBypassProcess = Process.Start(new ProcessStartInfo()
             {
                 FileName = path,
