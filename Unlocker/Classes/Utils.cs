@@ -95,11 +95,11 @@ namespace FortniteBurger.Classes
                 }
             }
 
-            for (int i = 0; i < SkinsItems_JSON["data"]["inventory"].Count(); i++)
+            for (int i = 0; i < SkinsItems_JSON["inventoryItems"].Count(); i++)
             {
-                if ((int)SkinsItems_JSON["data"]["inventory"][i]["quantity"] > 3)
+                if ((int)SkinsItems_JSON["inventoryItems"][i]["quantity"] > 3)
                 {
-                    SkinsItems_JSON["data"]["inventory"][i]["quantity"] = realItemAmount;
+                    SkinsItems_JSON["inventoryItems"][i]["quantity"] = realItemAmount;
                 }
             }
 
