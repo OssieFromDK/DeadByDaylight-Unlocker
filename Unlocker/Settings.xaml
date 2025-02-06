@@ -21,7 +21,7 @@
         <TextBlock Text="Fortnite Burger" FontSize="75" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
         <TextBlock Text="Settings" FontSize="50" Margin="0,150,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
 
-        <TextBlock Text="Start Pak Bypass" FontSize="35" Margin="0,275,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+        <!--<TextBlock Text="Start Pak Bypass" FontSize="35" Margin="0,275,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
         <Button x:Name="PakBypass" Content="Pak Bypass" 
                 Margin="0,400,0,0"
                 Background="#292d33"
@@ -34,7 +34,7 @@
                 Width="200"
                 Height="75"
                 Visibility="Visible"
-                Click="PakBypass_Start"/>
+                Click="PakBypass_Start"/>-->
 
         <TextBlock Text="Show Overlay" FontSize="20" Margin="0,0,400,100" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
         <CheckBox Click="Overlay_Clicked" x:Name="Overlay_Check" IsChecked="True" Margin="0,0,400,25" VerticalAlignment="Center" HorizontalAlignment="Center">

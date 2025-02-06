@@ -7,3 +7,7 @@ Unlocker/FortniteBurger.csproj.user
 /Unlocker/.vs
 /Unlocker/bin
 /Unlocker/obj
+/Worker/obj
+/Worker/bin
+/Worker/.vs
+Worker/Properties/PublishProfiles/FolderProfile.pubxml.user

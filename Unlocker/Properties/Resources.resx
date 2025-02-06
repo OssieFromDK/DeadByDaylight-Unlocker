@@ -154,9 +154,6 @@
   <data name="Signature_KEK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signature_KEK.kek;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="BurgerWorker" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BurgerWorker.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Bloodweb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bloodweb.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -183,5 +180,8 @@
   </data>
   <data name="SkinsWithItems" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SkinsWithItems.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BurgerWorker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BurgerWorker.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

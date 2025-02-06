@@ -50,7 +50,7 @@ namespace FortniteBurger
 
         internal void CheckForMS()
         {
-            if (MainWindow.CurrentType == "MS")
+            /*if (MainWindow.CurrentType == "MS")
             {
                 MS.Visibility = Visibility.Visible;
                 Allowed.Visibility = Visibility.Collapsed;
@@ -59,7 +59,7 @@ namespace FortniteBurger
             {
                 MS.Visibility = Visibility.Collapsed;
                 Allowed.Visibility = Visibility.Visible;
-            }
+            }*/
         }
 
         internal void SetIsInstalled(string ModName, Dictionary<string,string> ConfigValues = null)

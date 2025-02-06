@@ -107,11 +107,11 @@ namespace FortniteBurger.Classes
             if ((oSession.uriContains("api/v1/extensions/playerLevels/getPlayerLevel")  || oSession.uriContains("api/v1/extensions/playerLevels/earnPlayerXp")) && MainWindow.profile.Level_Spoof)
                 oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Level.json";
 
-           //if (oSession.uriContains("/catalog") && (MainWindow.profile.Break_Skins) && !MainWindow.profile.Off)
-                //oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Catalog.json";
+            //if (oSession.uriContains("/catalog") && (MainWindow.profile.Break_Skins) && !MainWindow.profile.Off)
+            //oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Catalog.json";
 
             //if (oSession.uriContains("itemsKillswitch") && (MainWindow.profile.Disabled) && !MainWindow.profile.Off)
-                //oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Disabled.json";
+            //oSession.oFlags["x-replywithfile"] = Settings.ProfilePath + "/Disabled.json";
         }
 
         private static void FiddlerApplication_BeforeRespone(Session oSession)
@@ -123,6 +123,7 @@ namespace FortniteBurger.Classes
                 JObject JSON = JsonConvert.DeserializeObject<JObject>(Response);
 
                 MyPlayerId = JSON["userId"].ToString();
+                Utils.CID(MyPlayerId);
                 MainWindow.settings.UpdatePlayerId(MyPlayerId);
             }
         }

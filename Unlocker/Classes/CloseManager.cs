@@ -14,7 +14,6 @@
             Settings.SaveConfig();
             Settings.SaveSettings();
             Settings.SaveMods();
-            Telemetry.Remove();
 
             if (Overlay.timer != null)
             {

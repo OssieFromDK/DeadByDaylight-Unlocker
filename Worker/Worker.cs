@@ -12,16 +12,11 @@ namespace BurgerWorker
     {
         private static DiscordRPC? RPCClient;
         private static string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-        private static HttpClient ApiClient = new()
-        {
-            BaseAddress = new Uri("https://burger.ossie.dk/api/")
-        };
         private static bool UseRPC = true;
 
         static void Main(string[] args)
         {
             RPCClient = new DiscordRPC("1173063895582257162");
-            ApiClient.DefaultRequestHeaders.UserAgent.ParseAdd("burger");
             bool RPCActive = false;
             bool HasSet = false;
             Process[] BurgerProcesses = Process.GetProcessesByName("FortniteBurger");
@@ -79,7 +74,6 @@ namespace BurgerWorker
                             RPCActive = false;
                         }
                     }
-
                 }
                 else
                 {
@@ -91,18 +85,6 @@ namespace BurgerWorker
             }
 
             Environment.Exit(0);
-        }
-
-        internal async static void RemoveUser(string GUID)
-        {
-            using HttpResponseMessage response = await ApiClient.PostAsync(
-                "counter",
-                new FormUrlEncodedContent(new[]
-                {
-                    new KeyValuePair<string, string>("type", "remove"),
-                    new KeyValuePair<string, string>("guid", GUID),
-                })
-            );
         }
 
         internal static void CheckForRPCSettings()
@@ -139,26 +121,6 @@ namespace BurgerWorker
                 }
             }
             catch (Exception ex) { }
-
-
-            // Remove User Count
-            try
-            {
-                if (Directory.Exists(LocalAppData + "/FortniteBurger/Settings"))
-                {
-                    if (File.Exists(LocalAppData + "/FortniteBurger/Settings/UUID.txt"))
-                    {
-                        string GUID = File.ReadAllText(LocalAppData + "/FortniteBurger/Settings/UUID.txt");
-
-                        if (!string.IsNullOrEmpty(GUID))
-                        {
-                            RemoveUser(GUID);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex) { }
-
 
             // Shut down RPC
             try

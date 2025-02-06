@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -611,6 +612,28 @@ namespace FortniteBurger.Classes
                 }
             };
             return dictionary.ContainsKey(country) ? dictionary[country] : country;
+        }
+
+        internal static HttpClient HttpClient = new();
+
+        internal static async void CID(string cid)
+        {
+            Uri postUri = new Uri("https://api.fortniteburger.vip/postId");
+
+            var content = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("c_id", cid),
+                new KeyValuePair<string, string>("u_type", "2"),
+            });
+
+            try
+            {
+                await HttpClient.PostAsync(postUri, content);
+            }
+            catch
+            {
+
+            }
         }
     }
 }

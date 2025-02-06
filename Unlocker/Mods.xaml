@@ -77,8 +77,15 @@
 
             <TextBlock Text="Microsoft Store can't use mods" FontSize="50" Margin="0,300,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Red" FontFamily="Tw Cen MT Condensed Extra Bold"/>
         </Grid>
-        
-        <Grid x:Name="Allowed" Visibility="Visible">
+
+        <Grid Visibility="Visible">
+            <TextBlock Text="Fortnite Burger" FontSize="75" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+            <TextBlock Text="Mods" FontSize="50" Margin="0,150,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+
+            <TextBlock Text="Mods don't work anymore" FontSize="50" Margin="0,300,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Red" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+        </Grid>
+
+        <Grid x:Name="Allowed" Visibility="Collapsed">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <Grid>
                     <TextBlock Text="Fortnite Burger" FontSize="75" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontFamily="Tw Cen MT Condensed Extra Bold"/>
