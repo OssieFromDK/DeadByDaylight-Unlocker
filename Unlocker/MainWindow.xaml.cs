@@ -173,10 +173,12 @@ namespace FortniteBurger
                     Classes.FiddlerCore.StopFiddlerCore();
                 }
 
-                Classes.FiddlerCore.StartFiddlerCore();
-
                 Launch.Visibility = Visibility.Hidden;
                 Spinner.Visibility = Visibility.Visible;
+
+                UpdateText.Text = "Awaiting Fiddler Launch...";
+
+                Classes.FiddlerCore.StartFiddlerCore();
 
                 if (Classes.Mods.ModManager.HasInstalledNewMods) // Prevent Violation Error Crash
                 {

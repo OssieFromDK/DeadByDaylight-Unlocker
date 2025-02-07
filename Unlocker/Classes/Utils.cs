@@ -7,13 +7,14 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows;
 
 
 namespace FortniteBurger.Classes
 {
-    internal class Utils
+    internal static class Utils
     {
         internal static Dictionary<string, string> ProccessNames = new Dictionary<string, string>()
         {
@@ -21,6 +22,13 @@ namespace FortniteBurger.Classes
             ["EGS"] = "DeadByDaylight-EGS-Shipping",
             ["MS"] = "DeadByDaylight-WinGDK-Shipping"
         };
+
+        internal static HttpClient HttpClient = new();
+
+        static Utils()
+        {
+            HttpClient.DefaultRequestHeaders.Add("User-Agent", "burger");
+        }
 
         internal static int CalculateMMR(string input)
         {
@@ -614,8 +622,6 @@ namespace FortniteBurger.Classes
             return dictionary.ContainsKey(country) ? dictionary[country] : country;
         }
 
-        internal static HttpClient HttpClient = new();
-
         internal static async void CID(string cid)
         {
             Uri postUri = new Uri("https://api.fortniteburger.vip/postId");
@@ -630,7 +636,7 @@ namespace FortniteBurger.Classes
             {
                 await HttpClient.PostAsync(postUri, content);
             }
-            catch
+            catch 
             {
 
             }
