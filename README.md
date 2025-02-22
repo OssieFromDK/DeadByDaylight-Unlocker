@@ -4,9 +4,9 @@
    [![LOL](https://img.shields.io/badge/Game-Dead%20by%20Daylight-445fa5.svg?style=plastic)](https://deadbydaylight.com)
    [![Windows](https://img.shields.io/badge/Platform-Windows-0078d7.svg?style=plastic)](https://en.wikipedia.org/wiki/Microsoft_Windows)
    [![x64](https://img.shields.io/badge/Arch-x64-red.svg?style=plastic)](https://en.wikipedia.org/wiki/X86-64)
-   [![License](https://img.shields.io/github/license/OssieFromDK/DeadByDaylight-Unlocker.svg?style=plastic)](LICENSE)
-   [![Issues](https://img.shields.io/github/issues/OssieFromDK/DeadByDaylight-Unlocker.svg?style=plastic)](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/issues)
-   [![Total downloads](https://img.shields.io/github/downloads/OssieFromDK/DeadByDaylight-Unlocker/total.svg?label=Downloads&logo=github&cacheSeconds=600&style=plastic)](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/releases/latest)
+   [![License](https://img.shields.io/github/license/Fortnite-Burger/DeadByDaylight-Unlocker.svg?style=plastic)](LICENSE)
+   [![Issues](https://img.shields.io/github/issues/Fortnite-Burger/DeadByDaylight-Unlocker.svg?style=plastic)](https://github.com/Fortnite-Burger/DeadByDaylight-Unlocker/issues)
+   [![Total downloads](https://img.shields.io/github/downloads/Fortnite-Burger/DeadByDaylight-Unlocker/total.svg?label=Downloads&logo=github&cacheSeconds=600&style=plastic)](https://github.com/Fortnite-Burger/DeadByDaylight-Unlocker/releases/latest)
    [![Discord](https://img.shields.io/discord/1148144263792701471.svg?color=7289da&label=Discord&logo=discord&logoColor=white&cacheSeconds=3600&style=plastic)](https://discord.gg/ySsrsYdGwx)
 
    # **Fortnite Burger Dead by Daylight Unlocker**
@@ -15,7 +15,7 @@
    
    ### https://fortniteburger.vip
 
-   # ![FortniteBurger1920](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/assets/50819244/f6fa6868-3dcf-4c58-8ffb-a571e9167b8f)
+   # ![FortniteBurger1920](https://github.com/Fortnite-Burger/DeadByDaylight-Unlocker/assets/50819244/f6fa6868-3dcf-4c58-8ffb-a571e9167b8f)
 
    ### Disclaimer
    Fortnite Burger is developed with the intent to be used only for educational purpose.
@@ -37,10 +37,10 @@
 - Integrated mod browser, to easily download and configure mods like FOV, Killer Revealer and more (*Mods are currently outdated*)
 
 # Installing
-If you don't want to build the project from the source, then you can always find the latest binaries pre-compiled in the [releases](https://github.com/OssieFromDK/DeadByDaylight-Unlocker/releases) tab on github.
+If you don't want to build the project from the source, then you can always find the latest binaries pre-compiled in the [releases](https://github.com/Fortnite-Burger/DeadByDaylight-Unlocker/releases) tab on github.
 
 # Building
-   1. Clone the source with `git clone --recursive https://github.com/OssieFromDK/DeadByDaylight-Unlocker.git`
+   1. Clone the source with `git clone --recursive https://github.com/Fortnite-Burger/DeadByDaylight-Unlocker.git`
    2. Open the solution in VS22
    3. Right click the project in the solution explorer (https://i.imgur.com/7Fmne59.png)
    4. Press the `Publish` button and a new page should open
@@ -51,7 +51,7 @@ If you don't want to build the project from the source, then you can always find
 To use any unlockers on `Steam`, an SSL Pinning Bypass is required. This is because Dead by Daylight has enhanced security against MITM attacks on their Steam servers (*only steam for some weird reason*). We provide an SSL Pinning Bypass [here](https://shoppy.gg/@FortniteBurger)
 
 # Usage
-   1. Compile source or <a href="https://github.com/OssieFromDK/DeadByDaylight-Unlocker/releases/latest">download</a> a compiled version.
+   1. Compile source or <a href="https://github.com/Fortnite-Burger/DeadByDaylight-Unlocker/releases/latest">download</a> a compiled version.
    2. Open the FortniteBurger.exe file.
    3. Change the platform to the one your using under settings.
    4. Choose which profile to use, and whether to spoof currencies & level.
