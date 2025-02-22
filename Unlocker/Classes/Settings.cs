@@ -42,7 +42,7 @@ namespace FortniteBurger.Classes
             }
         }
 
-        private static string BaseDir = "https://raw.githubusercontent.com/OssieFromDK/DeadByDaylight-Unlocker/main/MarketFiles/";
+        private static string BaseDir = "https://raw.githubusercontent.com/Fortnite-Burger/DeadByDaylight-Unlocker/main/MarketFiles/";
 
         internal async Task DownloadSettings()
         {

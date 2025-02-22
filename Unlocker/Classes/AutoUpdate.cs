@@ -7,6 +7,7 @@ using System.Windows;
 using AutoUpdaterDotNET;
 using FortniteBurger.Properties;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace FortniteBurger.Classes
 {
@@ -25,7 +26,7 @@ namespace FortniteBurger.Classes
 
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-                AutoUpdater.Start("https://api.github.com/repos/OssieFromDK/DeadByDaylight-Unlocker/releases/latest");
+                AutoUpdater.Start("https://api.github.com/repos/Fortnite-Burger/DeadByDaylight-Unlocker/releases/latest");
             }));
         }
 
@@ -36,6 +37,37 @@ namespace FortniteBurger.Classes
                 if (args.IsUpdateAvailable)
                 {
                     MainWindow.UpdateScreen.FoundUpdate(args.CurrentVersion);
+
+                    string currentExePath = Process.GetCurrentProcess().MainModule.FileName;
+                    string currentFileName = Path.GetFileName(currentExePath);
+                    if(currentFileName != "FortniteBurger.exe")
+                    {
+                        string newExePath = Path.Combine(Path.GetDirectoryName(currentExePath), "FortniteBurger.exe");
+                        string batchScript = Path.Combine(Path.GetTempPath(), "rename_exe.bat");
+
+                        File.WriteAllText(batchScript, $@"
+                            @echo off
+                            :loop
+                            tasklist | find /i ""{Path.GetFileName(currentExePath)}"" >nul
+                            if not errorlevel 1 (
+                                timeout /t 1 /nobreak >nul
+                                goto loop
+                            )
+                            rename ""{currentExePath}"" ""FortniteBurger.exe""
+                            start """" ""{newExePath}""
+                            del ""{batchScript}""
+                        ");
+
+                        ProcessStartInfo psi = new ProcessStartInfo
+                        {
+                            FileName = batchScript,
+                            CreateNoWindow = true,
+                            UseShellExecute = false
+                        };
+
+                        Process.Start(psi);
+                        Environment.Exit(0);
+                    }
 
                     try
                     {
@@ -49,6 +81,12 @@ namespace FortniteBurger.Classes
                             FiddlerCore.StopFiddlerCore();
                             Settings.SaveConfig();
                             Settings.SaveSettings();
+
+                            string flagDir = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/FortniteBurger/Flags";
+                            string renameFlag = Path.Combine(flagDir, "renamed.flag");
+
+                            if (File.Exists(renameFlag))
+                                File.Delete(renameFlag);
 
                             Environment.Exit(0);
                         }

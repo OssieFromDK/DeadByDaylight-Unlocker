@@ -7,8 +7,17 @@
     <ApplicationIcon>burger.ico</ApplicationIcon>
     <_SuppressWpfTrimError>true</_SuppressWpfTrimError>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <Title>Fortnite Burger</Title>
-    <Authors>Ossie - OssieFromDK</Authors>
+    <Title>.</Title>
+    <Authors>.</Authors>
+    <Version>1.0</Version>
+    <Company>.</Company>
+    <Product>.</Product>
+    <PackageId> </PackageId>
+    <AssemblyVersion>1.0</AssemblyVersion>
+    <FileVersion>1.0</FileVersion>
+    <Description>...</Description>
+    <PackageReleaseNotes>...</PackageReleaseNotes>
+    <AssemblyName>svchost</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

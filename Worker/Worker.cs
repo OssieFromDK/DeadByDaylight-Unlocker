@@ -19,7 +19,22 @@ namespace BurgerWorker
             RPCClient = new DiscordRPC("1173063895582257162");
             bool RPCActive = false;
             bool HasSet = false;
-            Process[] BurgerProcesses = Process.GetProcessesByName("FortniteBurger");
+            string fileName = "FortniteBurger";
+
+            RegistryKey MainKey = Registry.LocalMachine.CreateSubKey("SOFTWARE\\FortniteBurger");
+            using (RegistryKey key = MainKey.CreateSubKey("Info"))
+            {
+                if (key != null)
+                {
+                    Object? specialName = key?.GetValue("Name");
+                    if (specialName != null)
+                    {
+                        fileName = specialName.ToString().Replace(".exe", "");
+                    }
+                }
+            }
+
+            Process[] BurgerProcesses = Process.GetProcessesByName(fileName);
             Process? BurgerProcess = null;
 
             if (BurgerProcesses.Length > 0)
