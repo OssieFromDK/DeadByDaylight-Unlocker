@@ -34,12 +34,16 @@ namespace FortniteBurger.Classes
 
         public static void StartFiddlerCore()
         {
+            FiddlerApplication.Prefs.SetStringPref("fiddler.certmaker.bc.RootCN", "FortniteBurger");
+            FiddlerApplication.Prefs.SetStringPref("fiddler.certmaker.bc.RootFriendly", "FortniteBurger");
             EnsureRootCertGrabber();
             //EnsureRootCertificate();
             FiddlerIsRunning = true;
             CONFIG.IgnoreServerCertErrors = true;
             CONFIG.EnableIPv6 = true;
-            FiddlerApplication.Startup(new FiddlerCoreStartupSettingsBuilder().ListenOnPort((ushort)8888).DecryptSSL().RegisterAsSystemProxy().Build());
+            Random random = new Random();
+            int port = random.Next(7777, 9999);
+            FiddlerApplication.Startup(new FiddlerCoreStartupSettingsBuilder().ListenOnPort((ushort)port).DecryptSSL().RegisterAsSystemProxy().Build());
         }
 
         public static void StartWithShutdown()

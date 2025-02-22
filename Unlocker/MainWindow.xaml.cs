@@ -40,7 +40,6 @@ namespace FortniteBurger
             InitializeComponent();
             main = this;
 
-            // Get current executable 
             string exeName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
             this.Title = exeName;
 
@@ -202,6 +201,16 @@ namespace FortniteBurger
             } catch(Exception ex)
             {
                 ErrorLog.CreateLog(ex.Message);
+                UpdateText.Text = "Failed to launch...";
+
+                Spinner.Visibility = Visibility.Hidden;
+                Error.Visibility = Visibility.Visible;
+
+                await Task.Delay(2000);
+
+                Error.Visibility = Visibility.Hidden;
+                Launch.Visibility = Visibility.Visible;
+                UpdateText.Text = String.Empty;
             }
         }
 

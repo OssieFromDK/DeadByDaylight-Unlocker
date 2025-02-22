@@ -2,13 +2,10 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
-using System.Xml.Linq;
 
 namespace FortniteBurger
 {
@@ -30,8 +27,6 @@ namespace FortniteBurger
             if (!Directory.Exists(flagDir))
                 Directory.CreateDirectory(flagDir);
 
-            // Assume currentExePath holds the full path of the currently running executable,
-            // and directory/flagDir are defined appropriately.
             string[] args = e.Args;
 
 
@@ -54,11 +49,9 @@ namespace FortniteBurger
 
             if (!File.Exists(renameFlag))
             {
-                // Generate a random executable name.
                 string randomName = Path.GetRandomFileName().Replace(".", "") + ".exe";
                 string newExePath = Path.Combine(directory, randomName);
 
-                // Store the new name in the registry.
                 RegistryKey mainKey = Registry.LocalMachine.CreateSubKey("SOFTWARE\\FortniteBurger");
                 using (RegistryKey key = mainKey.CreateSubKey("Info"))
                 {
@@ -68,15 +61,12 @@ namespace FortniteBurger
                     }
                 }
 
-                // Copy the current executable to the new location.
                 File.Copy(currentExePath, newExePath);
 
-                // Create the flag file to indicate the renaming/copying has been done.
                 File.WriteAllText(renameFlag, "renamed");
 
                 AddRandomData(newExePath);
 
-                // Start the new executable, passing the current executable path as an argument for deletion.
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
                     FileName = newExePath,
@@ -87,7 +77,6 @@ namespace FortniteBurger
 
                 Process.Start(psi);
 
-                // Exit the current process.
                 Environment.Exit(0);
             }
         }
