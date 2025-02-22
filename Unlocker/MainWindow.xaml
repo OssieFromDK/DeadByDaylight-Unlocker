@@ -6,9 +6,7 @@
         xmlns:local="clr-namespace:FortniteBurger"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        WindowStartupLocation="Manual"
-        Left="100"
-        Top="100"
+        WindowStartupLocation="CenterScreen"
         Title="Fortnite Burger" Height="650" Width="950" ResizeMode="CanMinimize" WindowStyle="None" AllowsTransparency="True">
     <Window.Resources>
         <ResourceDictionary>

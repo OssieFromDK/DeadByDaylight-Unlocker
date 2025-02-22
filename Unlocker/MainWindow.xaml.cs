@@ -40,6 +40,10 @@ namespace FortniteBurger
             InitializeComponent();
             main = this;
 
+            // Get current executable 
+            string exeName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+            this.Title = exeName;
+
             try
             {
                 Classes.Settings.LoadSettings();
